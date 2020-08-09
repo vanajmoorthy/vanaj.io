@@ -5,7 +5,8 @@
 			<HorizontalDivider></HorizontalDivider>
 			<Hero></Hero>
 			<HorizontalDivider></HorizontalDivider>
-			<Art v:for="project in projects" :link="project.link"></Art>
+			{{ projects }}
+			<!-- <Art v:for="link in projects" :link="link.link"></Art> -->
 		</div>
 	</div>
 </template>
@@ -45,7 +46,7 @@ export default {
 				for (let i = 0; i < res.length; i++) {
 					images.push({ link: res[i].covers.original });
 				}
-				this.project = images;
+				this.projects = images;
 			})
 			.fail((error) => {
 				console.error(error);
