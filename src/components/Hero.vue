@@ -1,22 +1,24 @@
 <template>
 	<div class="hero">
-		<div>
+		<div class="image-holder">
 			<img src="../assets/me.jpg" alt="Image of Vanaj Moorthy" />
 		</div>
 		<div class="text">
 			<div class="top-text">
-				<h1>18 year old developer and artist from New Delhi.</h1>
+				<h1>
+					Hi, I'm Vanaj. I'm a developer and artist from New Delhi.
+				</h1>
 			</div>
 			<div class="bottom-text">
 				<p>
-					Hi, I'm Vanaj. I'm an incoming freshman at the University of
-					St. Andrews and an outgoing senior from The Shri Ram School.
-					I'm an avid web developer with a focus on front-end and
-					back-end in Node.js. I also love digital art and animation.
-					I do 3D art in Blender, motion graphics in After Effects,
-					and illustration in Illustrator. I also play the guitar,
-					bass, drums and piano and I have an advanced + deep diving
-					scuba diving certification from PADI. My favourite musicians
+					I'm an incoming freshman at the University of St. Andrews
+					and an outgoing senior from The Shri Ram School. I'm an avid
+					web developer with a focus on front-end and back-end in
+					Node.js. I also love digital art and animation. I do 3D art
+					in Blender, motion graphics in After Effects, and
+					illustration in Illustrator. I also play the guitar, bass,
+					drums and piano and I have an advanced + deep diving scuba
+					diving certification from PADI. My favourite musicians
 					include John Mayer, Vulfpeck and Andrew Bird; my favourite
 					book is The Hitchhiker's Guide to the Galaxy by Douglas
 					Adams; my favourite poem is "Ozymandias by Percy Bysshe
@@ -36,6 +38,11 @@ export default {
 <style scoped>
 img {
 	height: 400px;
+	border-radius: 8px;
+}
+
+.image-holder {
+	height: 125px;
 }
 
 .hero {
@@ -66,7 +73,7 @@ p {
 	line-height: 20px;
 }
 
-@media screen and (max-width: 1142px) {
+@media screen and (max-width: 1190px) {
 	.hero {
 		flex-direction: column;
 	}
@@ -75,6 +82,8 @@ p {
 		height: 150px;
 		width: auto;
 		clip-path: circle(60px at center);
+		position: relative;
+		top: -20px;
 	}
 
 	.text {
@@ -84,7 +93,7 @@ p {
 
 	h1 {
 		margin-bottom: 1rem;
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 }
 </style>

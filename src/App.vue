@@ -4,6 +4,7 @@
 			<Navbar> </Navbar>
 			<HorizontalDivider></HorizontalDivider>
 			<Hero> </Hero>
+			<HorizontalDivider></HorizontalDivider>
 		</div>
 	</div>
 </template>
@@ -12,6 +13,8 @@
 import Navbar from "./components/Navbar.vue";
 import HorizontalDivider from "./components/HorizontalDivider.vue";
 import Hero from "./components/Hero.vue";
+import Art from "./components/Art.vue";
+import axios from "axios";
 
 export default {
 	name: "App",
@@ -19,6 +22,16 @@ export default {
 		Navbar,
 		HorizontalDivider,
 		Hero,
+	},
+	data() {
+		return {
+			info: null,
+		};
+	},
+	mounted() {
+		axios
+			.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+			.then((response) => console.log(response));
 	},
 };
 </script>
@@ -39,12 +52,12 @@ body {
 }
 
 .home {
-	margin: 2rem 20rem;
+	margin: 2rem 25rem;
 }
 
 @media screen and (max-width: 1350px) {
 	.home {
-		margin: 2rem 8rem;
+		margin: 2rem 15rem;
 	}
 }
 
