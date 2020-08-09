@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import encoding from "encoding";
 
 const API_ENDPOINT = "https://api.spotify.com/v1/me/player/recently-played";
 
