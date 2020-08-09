@@ -60,9 +60,6 @@ https://www.vanajmoorthy.com/dogs/* https://dogs-vanajmoorthy.netlify.app/:splat
 https://www.vanajmoorthy.com/blog https://www.vanajmoorthy.com/blog/index.html 302
 https://www.vanajmoorthy.com/blog/* https://blog-vanajmoorthy.netlify.app/:splat 200!
 
-https://www.vanajmoorthy.com/decision https://www.vanajmoorthy.com/decision/index.html 302
-https://www.vanajmoorthy.com/decision/* https://decision-vanajmoorthy.netlify.app/:splat 200!
-
 https://www.vanajmoorthy.com/gravity https://www.vanajmoorthy.com/gravity/index.html 302
 https://www.vanajmoorthy.com/gravity/* https://gravity-vanajmoorthy.netlify.app/:splat 200!
 
