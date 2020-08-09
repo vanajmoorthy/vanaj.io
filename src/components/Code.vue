@@ -152,7 +152,7 @@ export default {
 				chevron.style.transform = "rotate(180deg)";
 				this.isExpanded = true;
 			} else {
-				div.style.height = "310px";
+				div.style.height = "275px";
 				chevron.style.transform = "rotate(0deg)";
 				this.isExpanded = false;
 			}
@@ -166,7 +166,7 @@ export default {
 	grid-gap: 1rem;
 	margin: 0 auto;
 	display: grid;
-	height: 310px;
+	height: 275px;
 	overflow: hidden;
 	transition: height ease 0.3s;
 }
