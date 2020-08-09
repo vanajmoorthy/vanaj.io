@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<a :href="link">
-			<img :src="src" />
+		<a :href="project.link">
+			<img :src="project.src" />
 		</a>
 	</div>
 </template>
@@ -10,8 +10,7 @@
 export default {
 	name: "Art",
 	props: {
-		src: String,
-		link: String,
+		project,
 	},
 };
 </script>

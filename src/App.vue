@@ -5,8 +5,7 @@
 			<HorizontalDivider></HorizontalDivider>
 			<Hero></Hero>
 			<HorizontalDivider></HorizontalDivider>
-			<!-- <Art v:for="(src, link) in projects" :src="src" :link="link"></Art> -->
-			<Art :src="projects[0].src" :link="projects[0].link"></Art>
+			<Art v:for="project in projects" :project="project"></Art>
 		</div>
 	</div>
 </template>
@@ -16,7 +15,6 @@ import Navbar from "./components/Navbar.vue";
 import HorizontalDivider from "./components/HorizontalDivider.vue";
 import Hero from "./components/Hero.vue";
 import Art from "./components/Art.vue";
-import axios from "axios";
 
 export default {
 	name: "App",
@@ -43,6 +41,7 @@ export default {
 			.done((response) => {
 				let data = [];
 				let res = response.projects;
+				console.log(res);
 				for (let i = 0; i < res.length; i++) {
 					data.push({
 						src: res[i].covers.original,
