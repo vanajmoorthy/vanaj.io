@@ -14,6 +14,8 @@
 			<HorizontalDivider></HorizontalDivider>
 			<Code></Code>
 			<HorizontalDivider></HorizontalDivider>
+			<ColophonMusic></ColophonMusic>
+			<HorizontalDivider></HorizontalDivider>
 		</div>
 	</div>
 </template>
@@ -24,6 +26,7 @@ import HorizontalDivider from "./components/HorizontalDivider.vue";
 import Hero from "./components/Hero.vue";
 import Art from "./components/Art.vue";
 import Code from "./components/Code.vue";
+import ColophonMusic from "./components/ColophonMusic.vue";
 
 export default {
 	name: "App",
@@ -33,6 +36,7 @@ export default {
 		Hero,
 		Art,
 		Code,
+		ColophonMusic,
 	},
 	data() {
 		return {

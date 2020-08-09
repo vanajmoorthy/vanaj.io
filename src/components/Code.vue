@@ -177,6 +177,14 @@ export default {
 	}
 }
 
+.rotate {
+	transform: rotate(180deg);
+}
+
+.no-rotate {
+	transform: rotate(0deg);
+}
+
 h1 {
 	font-size: 1.8rem;
 	font-weight: 500;
@@ -206,5 +214,9 @@ svg {
 	background-color: #15334b;
 	transition: background-color ease 0.2s;
 	cursor: pointer;
+}
+
+.row button:focus {
+	outline: none;
 }
 </style>

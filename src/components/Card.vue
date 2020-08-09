@@ -35,8 +35,12 @@ export default {
 	cursor: pointer;
 }
 
-.card:hover + .fas {
-	transform: translateY(-10px);
+.card:hover svg {
+	transform: translateY(-5px);
+}
+
+svg {
+	transition: all ease 0.3s;
 }
 
 .col {
