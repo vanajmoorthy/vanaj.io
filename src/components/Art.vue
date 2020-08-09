@@ -9,7 +9,10 @@
 <script>
 export default {
 	name: "Art",
-	props: ["src", "link"],
+	props: {
+		src: String,
+		link: String,
+	},
 };
 </script>
 
