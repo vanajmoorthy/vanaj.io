@@ -71,6 +71,7 @@ p {
 	font-weight: 300;
 	font-size: 1rem;
 	line-height: 20px;
+	/* text-align: justify; */
 }
 
 @media screen and (max-width: 1190px) {

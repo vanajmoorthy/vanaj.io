@@ -25,13 +25,22 @@ export default {
 	},
 	data() {
 		return {
-			info: null,
+			projects: null,
 		};
 	},
 	mounted() {
-		axios
-			.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-			.then((response) => console.log(response));
+		const url =
+			"https://www.behance.net/v2/users/vanajmoorthy/projects?client_id=ZLBxK9rEfHwJf9K0rmseNr2fS2gS2HJW";
+		$.ajax({
+			url: url,
+			type: "get",
+			data: { projects: {} },
+			dataType: "jsonp",
+		})
+			.done((response) => console.log(response["projects"]))
+			.fail((error) => {
+				console.error(error);
+			});
 	},
 };
 </script>
