@@ -2,5 +2,7 @@
 # all sub redirects
 $APP_REDIRECTS
 
+https://vanajmoorthy.com/v3/* https://v3-vanajmoorthy.netlify.app/:splat 200!
+
 # all github redirects
-https://www.vanajmoorthy.com/gh/* https://github.com/vanajmoorthy/:splat 302
+https://vanajmoorthy.com/gh/* https://github.com/vanajmoorthy/:splat 302
