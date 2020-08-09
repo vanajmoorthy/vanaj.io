@@ -1,11 +1,15 @@
 <template>
-	<div><img :src="link" /></div>
+	<div>
+		<a :href="link">
+			<img :src="src" />
+		</a>
+	</div>
 </template>
 
 <script>
 export default {
 	name: "Art",
-	props: ["link"],
+	props: ["src", "link"],
 };
 </script>
 

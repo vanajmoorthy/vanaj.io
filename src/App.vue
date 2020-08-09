@@ -6,7 +6,7 @@
 			<Hero></Hero>
 			<HorizontalDivider></HorizontalDivider>
 			<!-- <Art v:for="link in projects" :link="link.link"></Art> -->
-			<Art :link="projects[0]"></Art>
+			<Art :src="projects[0]" :link="links[0]"></Art>
 		</div>
 	</div>
 </template>
@@ -29,6 +29,7 @@ export default {
 	data() {
 		return {
 			projects: null,
+			links: null,
 		};
 	},
 	mounted() {
@@ -42,11 +43,14 @@ export default {
 		})
 			.done((response) => {
 				let images = [];
+				let link = [];
 				let res = response.projects;
 				for (let i = 0; i < res.length; i++) {
 					images.push(res[i].covers.original);
+					link.push(res[i].url);
 				}
 				this.projects = images;
+				this.links = link;
 			})
 			.fail((error) => {
 				console.error(error);
