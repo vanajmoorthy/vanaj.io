@@ -1,11 +1,11 @@
 <template>
-	<div>{{ images }}</div>
+	<div><img :src="link" /></div>
 </template>
 
 <script>
 export default {
 	name: "Art",
-	props: ["images"],
+	props: ["link"],
 };
 </script>
 

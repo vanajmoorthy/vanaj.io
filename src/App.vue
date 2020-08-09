@@ -1,10 +1,11 @@
 <template>
 	<div id="app">
 		<div class="home">
-			<Navbar> </Navbar>
+			<Navbar></Navbar>
 			<HorizontalDivider></HorizontalDivider>
-			<Hero> </Hero>
+			<Hero></Hero>
 			<HorizontalDivider></HorizontalDivider>
+			<Art v:for="project in projects" :link="project.link"></Art>
 		</div>
 	</div>
 </template>
@@ -22,6 +23,7 @@ export default {
 		Navbar,
 		HorizontalDivider,
 		Hero,
+		Art,
 	},
 	data() {
 		return {
@@ -41,10 +43,9 @@ export default {
 				let images = [];
 				let res = response.projects;
 				for (let i = 0; i < res.length; i++) {
-					images.push(res[i].covers.original);
+					images.push({ link: res[i].covers.original });
 				}
-				console.log(images);
-				// console.log(response.projects);
+				this.project = images;
 			})
 			.fail((error) => {
 				console.error(error);
