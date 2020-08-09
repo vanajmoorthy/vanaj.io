@@ -157,6 +157,7 @@ export default {
 				chevron.style.transform = "rotate(0deg)";
 				this.isExpanded = false;
 			}
+			console.log(div.classList);
 		},
 	},
 };
@@ -167,18 +168,18 @@ export default {
 	grid-gap: 1rem;
 	margin: 0 auto;
 	display: grid;
-	height: 320px;
-	overflow: hidden;
-}
-
-.expandedCards {
 	height: 100%;
+	overflow: hidden;
 }
 
 @media screen and (max-width: 1015px) {
 	.cards {
-		height: 280px;
+		height: 275px;
 	}
+}
+
+.expandedCards {
+	height: 100% !important;
 }
 
 @media (min-width: 600px) {
