@@ -1,4 +1,4 @@
 
 # all sub redirects
-https://www.vanajmoorthy.com/morph https://www.vanajmoorthy.com/morph/index.html 302
-https://www.vanajmoorthy.com/morph/* https://morph-vanajmoorthy.netlify.app/:splat 200!
+https://vanajmoorthy.com/morph https://vanajmoorthy.com/morph/index.html 302
+https://vanajmoorthy.com/morph/* https://morph-vanajmoorthy.netlify.app/:splat 200!
