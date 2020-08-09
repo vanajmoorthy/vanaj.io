@@ -86,13 +86,13 @@ li {
 	justify-content: center;
 	align-items: center;
 	background-color: #1b405e;
-	transition: all ease 0.3s;
+	transition: all ease 0.2s;
 }
 
 li:hover {
 	background-color: #15334b;
 	transform: translateY(-5px);
-	transition: all ease 0.3s;
+	transition: all ease 0.2s;
 }
 
 .fa-twitter {
