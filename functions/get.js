@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
 				"Access-Control-Allow-Methods": "*",
 				"Access-Control-Allow-Headers": "*",
 			},
-			body: data,
+			body: JSON.stringify({ key: "data" }),
 		}))
 		.catch((error) => ({ statusCode: 422, body: String(error) }));
 };
