@@ -19,6 +19,7 @@ exports.handler = async (event, context) => {
 				"Access-Control-Allow-Origin": "*",
 				"Access-Control-Allow-Methods": "*",
 				"Access-Control-Allow-Headers": "*",
+				"Cache-Control": "public,max-age=60",
 			},
 			body: JSON.stringify(data),
 		}))
@@ -28,6 +29,7 @@ exports.handler = async (event, context) => {
 				"Access-Control-Allow-Origin": "*",
 				"Access-Control-Allow-Methods": "*",
 				"Access-Control-Allow-Headers": "*",
+				"Cache-Control": "public,max-age=60",
 			},
 			body: String(error),
 		}));

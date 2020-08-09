@@ -147,12 +147,13 @@ export default {
 		expandDiv() {
 			const div = document.querySelector(".cards");
 			const chevron = document.getElementById("chevron");
+
 			if (!this.isExpanded) {
-				div.style.height = "100%";
+				div.classList.add("expandedCards");
 				chevron.style.transform = "rotate(180deg)";
 				this.isExpanded = true;
 			} else {
-				div.style.height = "275px";
+				div.classList.remove("expandedCards");
 				chevron.style.transform = "rotate(0deg)";
 				this.isExpanded = false;
 			}
@@ -166,9 +167,18 @@ export default {
 	grid-gap: 1rem;
 	margin: 0 auto;
 	display: grid;
-	height: 275px;
+	height: 320px;
 	overflow: hidden;
-	transition: height ease 0.3s;
+}
+
+.expandedCards {
+	height: 100%;
+}
+
+@media screen and (max-width: 1015px) {
+	.cards {
+		height: 280px;
+	}
 }
 
 @media (min-width: 600px) {
@@ -190,7 +200,7 @@ h1 {
 	font-weight: 500;
 	color: white;
 	border-bottom: 10px solid #1b405e;
-	line-height: 0.4;
+
 	width: 70px;
 }
 .row {

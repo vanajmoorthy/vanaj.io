@@ -3,9 +3,9 @@
 		<h1>Music</h1>
 		<p>My most recently played tracks on Spotify are</p>
 		<ul>
-			<li>{{ song1 }} - {{ artist1 }}</li>
-			<li>{{ song2 }} - {{ artist2 }}</li>
-			<li>{{ song3 }} - {{ artist3 }}</li>
+			<li>{{ song1 }} — {{ artist1 }}</li>
+			<li>{{ song2 }} — {{ artist2 }}</li>
+			<li>{{ song3 }} — {{ artist3 }}</li>
 		</ul>
 	</div>
 </template>
