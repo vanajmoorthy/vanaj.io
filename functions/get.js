@@ -1,6 +1,7 @@
-exports.handler = function(event, context, callback) {
-	callback(null, {
+exports.handler = async (event, context) => {
+	return {
 		statusCode: 200,
-		body: "Hello, World",
-	});
+		headers: { "Access-Control-Allow-Origin": "https://vanajmoorthy.com" },
+		body: "GREETING",
+	};
 };

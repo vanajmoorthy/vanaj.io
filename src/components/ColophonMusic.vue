@@ -30,7 +30,7 @@ export default {
 		};
 	},
 	mounted() {
-		const url = "vanajmoorthy.com/.netlify/functions/get)";
+		const url = "https://vanajmoorthy.com/.netlify/functions/get";
 		fetch(url)
 			.then((res) => res.json)
 			.then((data) => console.log(data));
