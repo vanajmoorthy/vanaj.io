@@ -1,7 +1,7 @@
 exports.handler = async (event, context) => {
 	return {
 		statusCode: 200,
-		headers: { "Access-Control-Allow-Origin": "vanajmoorthy.com" },
+		headers: { "Access-Control-Allow-Origin": "*" },
 		body: "GREETING",
 	};
 };
