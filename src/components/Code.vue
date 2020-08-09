@@ -200,7 +200,7 @@ h1 {
 	font-weight: 500;
 	color: white;
 	border-bottom: 10px solid #1b405e;
-
+	line-height: 0.4;
 	width: 70px;
 }
 .row {
