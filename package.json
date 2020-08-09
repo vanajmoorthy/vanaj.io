@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "node redirects/prebuild.js && vue-cli-service build",
+    "deploy": "npm run build && git add -A && git commit -m 'redirects' && git push"
   },
   "dependencies": {
     "register-service-worker": "^1.7.1",
