@@ -22,11 +22,11 @@ export default {
 	data() {
 		return {
 			song1: null,
-			artist1: "Pink Floyd",
+			artist1: null,
 			song2: null,
-			artist2: "Karnivool",
+			artist2: null,
 			song3: null,
-			artist3: "Vulfpeck",
+			artist3: null,
 		};
 	},
 	mounted() {
