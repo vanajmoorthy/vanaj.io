@@ -38,6 +38,9 @@ export default {
 .card:hover svg {
 	transform: translateY(-5px);
 }
+.card:hover h1 {
+	transform: translateY(-5px);
+}
 
 svg {
 	transition: all ease 0.3s;
@@ -64,6 +67,7 @@ a {
 h1 {
 	font-weight: 500;
 	font-size: 1.8rem;
+	transition: all ease 0.3s;
 }
 
 @media screen and (max-width: 1015px) {
