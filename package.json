@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "node redirects/prebuild.js && vue-cli-service build",
-    "deploy": "npm run build && git add -A && git commit -m 'redirects' && git push"
+    "deploy": "npm run build && git add -A && git commit -m 'redirects' && git push",
+    "start": "npm run serve"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
@@ -16,13 +16,8 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
-    "@vue/cli-plugin-pwa": "~4.4.0",
+    "@vue/cli-plugin-pwa": "^4.4.6",
     "@vue/cli-service": "~4.4.0",
     "vue-template-compiler": "^2.6.11"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }

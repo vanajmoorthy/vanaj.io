@@ -71,10 +71,3 @@ https://www.vanajmoorthy.com/v3/* https://v3-vanajmoorthy.netlify.app/:splat 200
 
 # all github redirects
 https://www.vanajmoorthy.com/gh/* https://github.com/vanajmoorthy/:splat 302
-
-# by-laws
-https://www.vanajmoorthy.com/bylaws https://docs.google.com/document/d/1S6CgsD4S4yotvGbult6IeNbonj57RtccqMz_ZOHu0m4/edit 302
-
-# default redirect
-https://www.vanajmoorthy.com/* /index.html 200
-https://vanajmoorthy.netlify.com/* https://www.vanajmoorthy.com/:splat 301!
