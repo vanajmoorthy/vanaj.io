@@ -61,7 +61,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 936px) {
 	.home {
 		margin: 2rem;
 	}

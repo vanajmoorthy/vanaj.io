@@ -9,7 +9,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<li><i class="fab fa-twitter fa-lg"></i></li>
+				<li class="first"><i class="fab fa-twitter fa-lg"></i></li>
 			</a>
 			<a
 				href="https://instagram.com/vanajmoorthy"
@@ -37,7 +37,9 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<li><i class="fab fa-behance-square fa-lg"></i></li>
+				<li class="last">
+					<i class="fab fa-behance-square fa-lg"></i>
+				</li>
 			</a>
 		</ul>
 	</nav>
@@ -140,14 +142,13 @@ li:hover {
 		justify-content: space-between;
 	}
 
-	li:nth-child(1) {
+	.first {
 		margin-right: 2rem;
 		margin-left: 0;
 	}
 
-	li:nth-child(5) {
-		margin-left: 0;
-		margin-right: 0;
+	.last {
+		margin: 0;
 	}
 }
 
@@ -156,14 +157,13 @@ li:hover {
 		margin-right: 1rem;
 	}
 
-	li:nth-child(1) {
+	.first {
 		margin-right: 1rem;
 		margin-left: 0;
 	}
 
-	li:nth-child(5) {
-		margin-left: 0;
-		margin-right: 0;
+	.last {
+		margin: 0;
 	}
 
 	i {
