@@ -58,14 +58,12 @@ export default {
 			.done((response) => {
 				let data = [];
 				let res = response.projects;
-				console.log(res);
 				for (let i = 0; i < res.length; i++) {
 					data.push({
 						src: res[i].covers.original,
 						link: res[i].url,
 					});
 				}
-				console.log(data);
 				this.projects = data;
 			})
 			.fail((error) => {
