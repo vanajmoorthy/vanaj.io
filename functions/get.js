@@ -2,6 +2,6 @@ exports.handler = async (event, context) => {
 	return {
 		statusCode: 200,
 		headers: { "Access-Control-Allow-Origin": "*" },
-		body: "GREETING",
+		body: JSON.stringify({ fuckyoukabir: "greeting" }),
 	};
 };
