@@ -32,7 +32,7 @@ export default {
 	mounted() {
 		const url = "https://vanajmoorthy.com/.netlify/functions/get";
 		fetch(url)
-			.then((res) => res)
+			.then((res) => res.json())
 			.then((data) => console.log(data));
 	},
 };
