@@ -1,6 +1,7 @@
 <template>
 	<div class="row">
 		<Colophon></Colophon>
+		<div class="divider"></div>
 		<Music
 			:song1="song1"
 			:song2="song2"
@@ -36,5 +37,22 @@ export default {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+}
+
+.divider {
+	display: none;
+	width: 100%;
+	height: 3px;
+	background-color: #1b405e;
+	margin: 2rem 0;
+}
+
+@media screen and (max-width: 610px) {
+	.divider {
+		display: block;
+	}
+	.row {
+		flex-direction: column;
+	}
 }
 </style>

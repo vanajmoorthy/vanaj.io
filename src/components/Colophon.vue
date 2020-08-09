@@ -40,4 +40,10 @@ p {
 	font-size: 1rem;
 	line-height: 20px;
 }
+
+@media screen and (max-width: 610px) {
+	div {
+		width: 100%;
+	}
+}
 </style>

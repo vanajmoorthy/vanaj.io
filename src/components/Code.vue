@@ -4,7 +4,7 @@
 			<h1>Code</h1>
 			<div>
 				<button v-on:click="expandDiv">
-					<i class="fas fa-chevron-down fa-lg"></i>
+					<i id="chevron" class="fas fa-chevron-down fa-lg"></i>
 				</button>
 			</div>
 		</div>
@@ -146,7 +146,7 @@ export default {
 	methods: {
 		expandDiv() {
 			const div = document.querySelector(".cards");
-			const chevron = document.querySelector("svg");
+			const chevron = document.getElementById("chevron");
 			if (!this.isExpanded) {
 				div.style.height = "100%";
 				chevron.style.transform = "rotate(180deg)";

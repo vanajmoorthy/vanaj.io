@@ -49,4 +49,10 @@ ul {
 	padding-inline-start: 20px;
 	list-style-type: hiragana;
 }
+
+@media screen and (max-width: 610px) {
+	div {
+		width: 100%;
+	}
+}
 </style>
