@@ -1,7 +1,7 @@
 const apps = require("./apps.json")
 	.map((app) => {
-		return `https://www.vanajmoorthy.com/${app} https://www.vanajmoorthy.com/${app}/index.html 302
-https://www.vanajmoorthy.com/${app}/* https://${app}-vanajmoorthy.netlify.app/:splat 200!`;
+		return `https://vanajmoorthy.com/${app} https://vanajmoorthy.com/${app}/index.html 302
+https://vanajmoorthy.com/${app}/* https://${app}-vanajmoorthy.netlify.app/:splat 200!`;
 	})
 	.join("\n\n");
 

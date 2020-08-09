@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "node redirects/prebuild.js && vue-cli-service build",
     "deploy": "npm run build && git add -A && git commit -m 'redirects' && git push",
     "start": "npm run serve"
   },
