@@ -2,11 +2,45 @@
 	<div>
 		<h1>Colophone</h1>
 		<p>
-			This website uses Gibson, is coded in Vue.js, and uses Font Awesome
+			This website uses
+			<a
+				href="https://fonts.adobe.com/fonts/gibson"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Gibson</a
+			>, is coded in
+			<a
+				href="https://vuejs.org/"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Vue.js</a
+			>, and uses
+			<a
+				href="https://fontawesome.com/"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Font Awesome</a
+			>
 			for all the icons. It's inspirations/plagiarism sources are
-			<a href="https://kabirgoel.com">kabirgoel.com</a> and
-			<a href="https://aesign.me">aesign.me</a>. You can visit the source
-			<a href="https://github.com/vanajmoorthy/vanajmoorthy.com">here</a>
+			<a
+				href="https://kabirgoel.com"
+				target="_blank"
+				rel="noopener noreferrer"
+				>kabirgoel.com</a
+			>
+			and
+			<a
+				href="https://aesign.me"
+				target="_blank"
+				rel="noopener noreferrer"
+				>aesign.me</a
+			>. You can visit the source
+			<a
+				href="https://github.com/vanajmoorthy/vanajmoorthy.com"
+				target="_blank"
+				rel="noopener noreferrer"
+				>here</a
+			>
 			if you see something you like!
 		</p>
 	</div>
