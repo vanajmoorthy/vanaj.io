@@ -39,10 +39,10 @@ body {
 }
 
 .home {
-	margin: 2rem 15rem;
+	margin: 2rem 20rem;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1350px) {
 	.home {
 		margin: 2rem 8rem;
 	}

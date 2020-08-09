@@ -86,6 +86,13 @@ li {
 	justify-content: center;
 	align-items: center;
 	background-color: #1b405e;
+	transition: all ease 0.3s;
+}
+
+li:hover {
+	background-color: #15334b;
+	transform: translateY(-5px);
+	transition: all ease 0.3s;
 }
 
 .fa-twitter {
@@ -108,7 +115,7 @@ li {
 	color: #228cdb;
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1250px) {
 	nav {
 		flex-direction: column;
 		margin-top: 3rem;

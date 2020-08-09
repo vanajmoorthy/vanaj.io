@@ -1,13 +1,26 @@
 <template>
 	<div class="hero">
-		<img src="../assets/me.jpg" alt="Image of Vanaj Moorthy" />
+		<div>
+			<img src="../assets/me.jpg" alt="Image of Vanaj Moorthy" />
+		</div>
 		<div class="text">
-			<div class="top-text"><h1>Hi, I'm Vanaj 👋</h1></div>
+			<div class="top-text">
+				<h1>18 year old developer and artist from New Delhi.</h1>
+			</div>
 			<div class="bottom-text">
 				<p>
-					I'm an 18 year old developer and artist from New Delhi. I
-					like JavaScript, playing instruments, scuba diving, and Lila
-					Dhar.
+					Hi, I'm Vanaj. I'm an incoming freshman at the University of
+					St. Andrews and an outgoing senior from The Shri Ram School.
+					I'm an avid web developer with a focus on front-end and
+					back-end in Node.js. I also love digital art and animation.
+					I do 3D art in Blender, motion graphics in After Effects,
+					and illustration in Illustrator. I also play the guitar,
+					bass, drums and piano and I have an advanced + deep diving
+					scuba diving certification from PADI. My favourite musicians
+					include John Mayer, Vulfpeck and Andrew Bird; my favourite
+					book is The Hitchhiker's Guide to the Galaxy by Douglas
+					Adams; my favourite poem is "Ozymandias by Percy Bysshe
+					Shelly"; and my favourite colour is #1da7ea.
 				</p>
 			</div>
 		</div>
@@ -22,14 +35,14 @@ export default {
 
 <style scoped>
 img {
-	height: 300px;
+	height: 400px;
 }
 
 .hero {
 	display: flex;
 }
 .text {
-	height: 300px;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -50,11 +63,28 @@ h1 {
 p {
 	font-weight: 300;
 	font-size: 1rem;
+	line-height: 20px;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 1142px) {
 	.hero {
 		flex-direction: column;
+	}
+
+	img {
+		height: 150px;
+		width: auto;
+		clip-path: circle(60px at center);
+	}
+
+	.text {
+		margin-left: 0;
+		height: auto;
+	}
+
+	h1 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
 	}
 }
 </style>
