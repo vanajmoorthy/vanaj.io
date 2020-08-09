@@ -10,12 +10,14 @@ exports.handler = async (event, context) => {
 			"Content-Type": "application/json",
 			Authorization:
 				"Bearer BQAHKyRYX9zRev0rU2HHHbFv7vHgZwOHTFzOlEIHXW51R9nNoWtkNsjGDCPnzABWs0_B50GLg2xmeAYrJTFZZqe8U2R8b7GvkJtRI-tY_XUSOp7u59XxGxtwd_sbhZkUEfta_iyYyGuGkJXL-wXjjvSz6vg4kewPaOYZnKUq",
-			"Access-Control-Allow-Origin": "*",
 		},
 	})
 		.then((response) => response.json())
 		.then((data) => ({
 			statusCode: 200,
+			headers: {
+				"Access-Control-Allow-Origin": "*",
+			},
 			body: data,
 		}))
 		.catch((error) => ({ statusCode: 422, body: String(error) }));
