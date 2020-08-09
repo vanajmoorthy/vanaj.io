@@ -34,6 +34,11 @@ export default {
 	transition: background-color 0.2s ease;
 	cursor: pointer;
 }
+
+.card:hover + .fas {
+	transform: translateY(-10px);
+}
+
 .col {
 	display: flex;
 	/* height: 100%; */

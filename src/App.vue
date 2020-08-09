@@ -13,6 +13,7 @@
 
 			<HorizontalDivider></HorizontalDivider>
 			<Code></Code>
+			<HorizontalDivider></HorizontalDivider>
 		</div>
 	</div>
 </template>

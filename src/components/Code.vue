@@ -141,12 +141,21 @@ export default {
 				},
 			],
 		};
+		isExpanded = false;
 	},
 	methods: {
 		expandDiv() {
 			const div = document.querySelector(".cards");
-			console.log(div);
-			div.style.height = "100%";
+			const chevron = document.querySelector("svg");
+			if (!this.isExpanded) {
+				div.style.height = "100%";
+				chevron.style.transform = "rotate(180deg)";
+				this.isExpanded = true;
+			} else {
+				div.style.height = "320px";
+				chevron.style.transform = "rotate(0deg)";
+				this.isExpanded = false;
+			}
 		},
 	},
 };
@@ -159,6 +168,7 @@ export default {
 	display: grid;
 	height: 320px;
 	overflow: hidden;
+	transition: height ease 0.3s;
 }
 
 @media (min-width: 600px) {
