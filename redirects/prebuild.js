@@ -11,7 +11,7 @@ const template = fs.readFileSync("redirects/_redirects-template", "utf-8");
 
 const output = template.replace("$APP_REDIRECTS", apps);
 
-fs.writeFileSync("_redirects", output);
+fs.writeFileSync("public/_redirects", output);
 
 // https://www.vanajmoorthy.com/morph https://www.vanajmoorthy.com/morph/index.html 302
 // https://www.vanajmoorthy.com/morph/* https://morph-vanajmoorthy.netlify.com/:splat 200!
