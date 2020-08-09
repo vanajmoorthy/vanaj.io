@@ -10,19 +10,25 @@
 				</h1>
 			</div>
 			<div class="bottom-text">
-				<p>
+				<p class="b-margin">
 					I'm an incoming freshman at the University of St. Andrews
 					and an outgoing senior from The Shri Ram School. I'm an avid
 					web developer with a focus on front-end and back-end in
-					Node.js. I also love digital art and animation. I do 3D art
-					in Blender, motion graphics in After Effects, and
-					illustration in Illustrator. I also play the guitar, bass,
-					drums and piano and I have an advanced + deep diving scuba
-					diving certification from PADI. My favourite musicians
-					include John Mayer, Vulfpeck and Andrew Bird; my favourite
-					book is The Hitchhiker's Guide to the Galaxy by Douglas
-					Adams; my favourite poem is "Ozymandias by Percy Bysshe
-					Shelly"; and my favourite colour is #1da7ea.
+					Node.js.
+				</p>
+				<p class="b-margin">
+					I also love digital art and animation. I do 3D art in
+					Blender, motion graphics in After Effects, and illustration
+					in Illustrator. I also play the guitar, bass, drums and
+					piano and I have an advanced + deep diving scuba diving
+					certification from PADI.
+				</p>
+				<p>
+					My favourite musicians include John Mayer, Vulfpeck and
+					Andrew Bird; my favourite book is The Hitchhiker's Guide to
+					the Galaxy by Douglas Adams; my favourite poem is
+					"Ozymandias by Percy Bysshe Shelly"; and my favourite colour
+					is #1da7ea.
 				</p>
 			</div>
 		</div>
@@ -39,6 +45,10 @@ export default {
 img {
 	height: 400px;
 	border-radius: 8px;
+}
+
+.b-margin {
+	margin-bottom: 1rem;
 }
 
 .image-holder {
@@ -74,7 +84,7 @@ p {
 	/* text-align: justify; */
 }
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1258px) {
 	.hero {
 		flex-direction: column;
 	}

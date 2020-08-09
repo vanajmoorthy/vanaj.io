@@ -65,4 +65,10 @@ h1 {
 	font-weight: 500;
 	font-size: 1.8rem;
 }
+
+@media screen and (max-width: 1015px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+}
 </style>

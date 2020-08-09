@@ -110,7 +110,7 @@ body {
 }
 
 .home {
-	margin: 2rem 25rem;
+	margin: 2rem 24rem;
 }
 
 .art-container {
@@ -133,7 +133,13 @@ body {
 	display: none;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1500px) {
+	.home {
+		margin: 2rem 20rem;
+	}
+}
+
+@media screen and (max-width: 1380px) {
 	.home {
 		margin: 2rem 15rem;
 	}
