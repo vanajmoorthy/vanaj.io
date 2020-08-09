@@ -85,6 +85,7 @@ p {
 		clip-path: circle(60px at center);
 		position: relative;
 		top: -20px;
+		margin: 0;
 	}
 
 	.text {

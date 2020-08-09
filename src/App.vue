@@ -5,7 +5,14 @@
 			<HorizontalDivider></HorizontalDivider>
 			<Hero></Hero>
 			<HorizontalDivider></HorizontalDivider>
-			<Art v:for="project in projects" :project="project"></Art>
+			<h1 class="art">Art</h1>
+
+			<div class="art-container">
+				<Art v-for="project in projects" :project="project"></Art>
+			</div>
+
+			<HorizontalDivider></HorizontalDivider>
+			<Code></Code>
 		</div>
 	</div>
 </template>
@@ -15,6 +22,7 @@ import Navbar from "./components/Navbar.vue";
 import HorizontalDivider from "./components/HorizontalDivider.vue";
 import Hero from "./components/Hero.vue";
 import Art from "./components/Art.vue";
+import Code from "./components/Code.vue";
 
 export default {
 	name: "App",
@@ -23,6 +31,7 @@ export default {
 		HorizontalDivider,
 		Hero,
 		Art,
+		Code,
 	},
 	data() {
 		return {
@@ -75,6 +84,26 @@ body {
 
 .home {
 	margin: 2rem 25rem;
+}
+
+.art-container {
+	display: flex;
+	overflow-x: scroll;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+}
+
+.art {
+	font-weight: 500;
+	color: white;
+	font-size: 1.8rem;
+	border-bottom: 10px solid #1b405e;
+	line-height: 0.4;
+	width: 40px;
+}
+
+.art-container::-webkit-scrollbar {
+	display: none;
 }
 
 @media screen and (max-width: 1350px) {
