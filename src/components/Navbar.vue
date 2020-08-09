@@ -4,11 +4,41 @@
 			<h1>Vanaj Moorthy</h1>
 		</div>
 		<ul>
-			<li><i class="fab fa-twitter fa-lg"></i></li>
-			<li><i class="fab fa-instagram fa-lg"></i></li>
-			<li><i class="fab fa-github fa-lg"></i></li>
-			<li><i class="fas fa-envelope fa-lg"></i></li>
-			<li><i class="fab fa-behance-square fa-lg"></i></li>
+			<a
+				href="https://twitter.com/vanajmoorthy"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fab fa-twitter fa-lg"></i></li>
+			</a>
+			<a
+				href="https://instagram.com/vanajmoorthy"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fab fa-instagram fa-lg"></i></li>
+			</a>
+			<a
+				href="https://github.com/vanajmoorthy"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fab fa-github fa-lg"></i></li>
+			</a>
+			<a
+				href="mailto:vanajmoorthy@gmail.com"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fas fa-envelope fa-lg"></i></li>
+			</a>
+			<a
+				href="https://www.behance.net/vanajmoorthy"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fab fa-behance-square fa-lg"></i></li>
+			</a>
 		</ul>
 	</nav>
 </template>
@@ -22,7 +52,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 nav {
-	font-family: "canada-type-gibson";
 	color: white;
 	display: flex;
 	flex-direction: row;
@@ -35,7 +64,7 @@ nav {
 }
 
 .name h1 {
-	margin: 0 0 1.3rem 0;
+	margin: 0 0 0 0;
 	font-size: 1.8rem;
 	font-weight: 600;
 	border-bottom: 6px solid #1b405e;
@@ -43,6 +72,7 @@ nav {
 }
 
 ul {
+	margin: 0;
 	list-style-type: none;
 	display: flex;
 	flex-direction: row;
@@ -77,7 +107,8 @@ li {
 .fa-behance-square {
 	color: #228cdb;
 }
-@media screen and (max-width: 1130px) {
+
+@media screen and (max-width: 1099px) {
 	nav {
 		flex-direction: column;
 		margin-top: 3rem;
@@ -91,6 +122,45 @@ li {
 	ul {
 		justify-content: flex-start;
 		align-items: flex-start;
+		padding-inline-start: 0;
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	ul {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	li:nth-child(1) {
+		margin-right: 2rem;
+		margin-left: 0;
+	}
+
+	li:nth-child(5) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	li {
+		margin-right: 1rem;
+	}
+
+	li:nth-child(1) {
+		margin-right: 1rem;
+		margin-left: 0;
+	}
+
+	li:nth-child(5) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	i {
+		height: 80%;
 	}
 }
 </style>
