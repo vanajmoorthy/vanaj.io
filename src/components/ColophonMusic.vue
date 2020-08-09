@@ -29,6 +29,12 @@ export default {
 			artist3: "Vulfpeck",
 		};
 	},
+	mounted() {
+		const url = "vanajmoorthy.com/.netlify/functions/get)";
+		fetch(url)
+			.then((res) => res.json)
+			.then((data) => console.log(data));
+	},
 };
 </script>
 
