@@ -37,7 +37,15 @@ export default {
 			data: { projects: {} },
 			dataType: "jsonp",
 		})
-			.done((response) => console.log(response["projects"]))
+			.done((response) => {
+				let images = [];
+				let res = response.projects;
+				for (let i = 0; i < res.length; i++) {
+					images.push(res[i].covers.original);
+				}
+				console.log(images);
+				// console.log(response.projects);
+			})
 			.fail((error) => {
 				console.error(error);
 			});
