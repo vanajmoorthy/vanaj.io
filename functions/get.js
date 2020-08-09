@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
 			Accept: "application/json",
 			"Content-Type": "application/json",
 			Authorization:
-				"Bearer BQAHKyRYX9zRev0rU2HHHbFv7vHgZwOHTFzOlEIHXW51R9nNoWtkNsjGDCPnzABWs0_B50GLg2xmeAYrJTFZZqe8U2R8b7GvkJtRI-tY_XUSOp7u59XxGxtwd_sbhZkUEfta_iyYyGuGkJXL-wXjjvSz6vg4kewPaOYZnKUq",
+				"Bearer BQC2oaaAz1bh7725ai_BfWTI8yL8kxFB4LTfoUxCOkntYiOLM68dCM3F1JYhK8NkcuzyIkoqGEYqZX99TBypjGeYDVkW3zwNsbYYYBuZ0OC1dnJdKrUDf3UNrL9zVEWXlIwG_JpHsHkQ9Q4vJ37IoBLlBjARwN_615rDBqaz",
 		},
 	})
 		.then((response) => response.json())

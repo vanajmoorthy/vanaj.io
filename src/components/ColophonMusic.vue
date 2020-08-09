@@ -34,6 +34,7 @@ export default {
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => {
+				console.log(data);
 				let res = data.items.sort((a, b) => {
 					return a.played_at < b.played_at
 						? 1
