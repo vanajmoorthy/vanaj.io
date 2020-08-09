@@ -9,10 +9,12 @@
     "deploy": "npm run build && git add -A && git commit -m 'redirects' && git push"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "@vue/cli-plugin-pwa": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
     "vue-template-compiler": "^2.6.11"
