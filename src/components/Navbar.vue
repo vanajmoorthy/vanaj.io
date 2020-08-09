@@ -1,6 +1,6 @@
 <template>
 	<nav>
-		<div class="name">
+		<div class="name" id="name">
 			<h1>Vanaj Moorthy</h1>
 		</div>
 		<ul>

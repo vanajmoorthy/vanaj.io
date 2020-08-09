@@ -35,6 +35,7 @@ h1 {
 	border-bottom: 10px solid #1b405e;
 	line-height: 0.4;
 	width: 75px;
+	margin-block-start: 0;
 }
 p {
 	color: white;
@@ -48,6 +49,7 @@ ul {
 	margin-block-start: 0;
 	padding-inline-start: 20px;
 	list-style-type: hiragana;
+	margin-block-end: 0;
 }
 
 @media screen and (max-width: 610px) {

@@ -16,6 +16,7 @@
 			<HorizontalDivider></HorizontalDivider>
 			<ColophonMusic></ColophonMusic>
 			<HorizontalDivider></HorizontalDivider>
+			<Footer></Footer>
 		</div>
 	</div>
 </template>
@@ -27,6 +28,7 @@ import Hero from "./components/Hero.vue";
 import Art from "./components/Art.vue";
 import Code from "./components/Code.vue";
 import ColophonMusic from "./components/ColophonMusic.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
 	name: "App",
@@ -37,6 +39,7 @@ export default {
 		Art,
 		Code,
 		ColophonMusic,
+		Footer,
 	},
 	data() {
 		return {
@@ -85,6 +88,25 @@ html {
 body {
 	background-color: #1a202c;
 	font-family: "canada-type-gibson";
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #1a202c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #1b405e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #122b3f;
 }
 
 .home {

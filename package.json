@@ -11,7 +11,8 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",

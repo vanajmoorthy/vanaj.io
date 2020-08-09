@@ -33,12 +33,19 @@ h1 {
 	border-bottom: 10px solid #1b405e;
 	line-height: 0.4;
 	width: 145px;
+	margin-block-start: 0;
 }
 p {
 	color: white;
 	font-weight: 300;
 	font-size: 1rem;
 	line-height: 20px;
+	margin-block-end: 0;
+}
+
+a:hover {
+	opacity: 0.7;
+	transition: opacity 0.2s ease;
 }
 
 @media screen and (max-width: 610px) {
