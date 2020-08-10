@@ -26,12 +26,11 @@ exports.handler = (event, context) => {
 	}
 
 	function getSongs() {
-		return fetch(API_ENDPOINT, {
+		return fetch(`${spotifyAPIBaseUri}/v1/me/player/recently-played`, {
 			headers: {
 				Accept: "application/json",
 				"Content-Type": "application/json",
-				Authorization:
-					"Bearer BQC2oaaAz1bh7725ai_BfWTI8yL8kxFB4LTfoUxCOkntYiOLM68dCM3F1JYhK8NkcuzyIkoqGEYqZX99TBypjGeYDVkW3zwNsbYYYBuZ0OC1dnJdKrUDf3UNrL9zVEWXlIwG_JpHsHkQ9Q4vJ37IoBLlBjARwN_615rDBqaz",
+				Authorization: `Bearer ${accessToken}`,
 			},
 		})
 			.then((response) => response.json())
