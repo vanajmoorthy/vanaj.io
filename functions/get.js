@@ -23,9 +23,9 @@ exports.handler = (event, context) => {
 			},
 		})
 			.then((response) => {
-				response.json();
+				console.log(response);
 			})
-			.then((json) => console.log(json));
+			.then((data) => console.log(data));
 	}
 
 	function getSongs() {
