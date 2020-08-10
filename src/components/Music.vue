@@ -3,9 +3,18 @@
 		<h1>Music</h1>
 		<p>My most recently played tracks on Spotify are:</p>
 		<ul>
-			<li>{{ song1 }} — {{ artist1 }}</li>
-			<li>{{ song2 }} — {{ artist2 }}</li>
-			<li>{{ song3 }} — {{ artist3 }}</li>
+			<li>
+				{{ song1 }} —
+				<span class="italics">{{ artist1 }}</span>
+			</li>
+			<li>
+				{{ song2 }} —
+				<span class="italics">{{ artist2 }}</span>
+			</li>
+			<li>
+				{{ song3 }} —
+				<span class="italics">{{ artist3 }}</span>
+			</li>
 		</ul>
 	</div>
 </template>
@@ -61,5 +70,9 @@ li {
 	div {
 		width: 100%;
 	}
+}
+
+.italics {
+	font-style: italic;
 }
 </style>
