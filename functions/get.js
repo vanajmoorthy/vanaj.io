@@ -22,7 +22,8 @@ exports.handler = async (event, context) => {
 				Authorization: `Basic ${base64EncodedString}`,
 			},
 		});
-		console.log(response);
+		const data = await response.json();
+		console.log(data);
 	}
 
 	function getSongs() {
