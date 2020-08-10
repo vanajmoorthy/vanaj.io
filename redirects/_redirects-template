@@ -5,5 +5,7 @@ $APP_REDIRECTS
 
 # all github redirects
 https://vanajmoorthy.com/v4/* https://v4-vanajmoorthy.netlify.app/:splat 200!
+https://vanajmoorthy.com/v3/* https://v3-vanajmoorthy.netlify.app/:splat 200!
+
 
 https://vanajmoorthy.com/gh/* https://github.com/vanajmoorthy/:splat 302
