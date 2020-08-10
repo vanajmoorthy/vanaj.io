@@ -1,36 +1,62 @@
 import fetch from "node-fetch";
 import encoding from "encoding";
 
-const API_ENDPOINT = "https://api.spotify.com/v1/me/player/recently-played";
+const spotifyAPIBaseUri = "https://api.spotify.com";
+const spotifyAccountsBaseUri = "https://accounts.spotify.com";
 
-exports.handler = async (event, context) => {
-	return fetch(API_ENDPOINT, {
-		headers: {
-			Accept: "application/json",
-			"Content-Type": "application/json",
-			Authorization:
-				"Bearer BQC2oaaAz1bh7725ai_BfWTI8yL8kxFB4LTfoUxCOkntYiOLM68dCM3F1JYhK8NkcuzyIkoqGEYqZX99TBypjGeYDVkW3zwNsbYYYBuZ0OC1dnJdKrUDf3UNrL9zVEWXlIwG_JpHsHkQ9Q4vJ37IoBLlBjARwN_615rDBqaz",
-		},
-	})
-		.then((response) => response.json())
-		.then((data) => ({
-			statusCode: 200,
+const clientId = "88b97c470479424f8fa87bc1c36601a5";
+const clientSecret = "eceba6a724b9427f90fa56416f035735";
+const refreshToken =
+	"AQC8YqyeDELEF-XOTNONaBZnzYztSWxBTeslQLPkKQxHQcWgo4i8Rm-2n4aRaL64mVUuS2ydj4Bo_NFk__Z53z4vE1CMPn3xjeenfeVbtaLubiygmxgJDlN_9RmwxNUzd68";
+let accessToken = "";
+
+exports.handler = (event, context) => {
+	function refreshAccessToken() {
+		return fetch(`${spotifyAccountsBaseUri}/api/token`, {
+			method: "POST",
+			body: `grant_type=refresh&refresh_token=${refreshToken}`,
 			headers: {
-				"Access-Control-Allow-Origin": "*",
-				"Access-Control-Allow-Methods": "*",
-				"Access-Control-Allow-Headers": "*",
-				"Cache-Control": "public,max-age=60",
+				Authorization: `Basic ${new Buffer(
+					`${clientId}:${clientSecret}`
+				).toString("base64")}`,
 			},
-			body: JSON.stringify(data),
-		}))
-		.catch((error) => ({
-			statusCode: 422,
+		}).then((response) =>
+			response.json().then((data) => (accessToken = data))
+		);
+	}
+
+	function getSongs() {
+		return fetch(API_ENDPOINT, {
 			headers: {
-				"Access-Control-Allow-Origin": "*",
-				"Access-Control-Allow-Methods": "*",
-				"Access-Control-Allow-Headers": "*",
-				"Cache-Control": "public,max-age=60",
+				Accept: "application/json",
+				"Content-Type": "application/json",
+				Authorization:
+					"Bearer BQC2oaaAz1bh7725ai_BfWTI8yL8kxFB4LTfoUxCOkntYiOLM68dCM3F1JYhK8NkcuzyIkoqGEYqZX99TBypjGeYDVkW3zwNsbYYYBuZ0OC1dnJdKrUDf3UNrL9zVEWXlIwG_JpHsHkQ9Q4vJ37IoBLlBjARwN_615rDBqaz",
 			},
-			body: String(error),
-		}));
+		})
+			.then((response) => response.json())
+			.then((data) => ({
+				statusCode: 200,
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Methods": "*",
+					"Access-Control-Allow-Headers": "*",
+					"Cache-Control": "public,max-age=60",
+				},
+				body: JSON.stringify(data),
+			}))
+			.catch((error) => ({
+				statusCode: 422,
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Methods": "*",
+					"Access-Control-Allow-Headers": "*",
+					"Cache-Control": "public,max-age=60",
+				},
+				body: String(error),
+			}));
+	}
+
+	refreshAccessToken();
+	getSongs();
 };
