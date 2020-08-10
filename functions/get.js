@@ -22,7 +22,7 @@ exports.handler = (event, context) => {
 				Authorization: `Basic ${base64EncodedString}`,
 			},
 		}).then((response) => {
-			accessToken = response;
+			accessToken = response.json();
 			console.log(accessToken);
 		});
 	}
