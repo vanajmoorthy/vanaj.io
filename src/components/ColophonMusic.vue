@@ -34,7 +34,6 @@ export default {
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
 				function removeDuplicates(arr) {
 					const result = [];
 					const duplicatesIndices = [];
