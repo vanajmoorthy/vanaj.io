@@ -20,9 +20,14 @@ exports.handler = (event, context) => {
 					`${clientId}:${clientSecret}`
 				).toString("base64")}`,
 			},
-		}).then((response) =>
-			response.json().then((data) => (accessToken = data))
-		);
+		})
+			.then((response) => {
+				response.json();
+			})
+			.then((data) => {
+				accessToken = data;
+				console.log(accessToken);
+			});
 	}
 
 	function getSongs() {
