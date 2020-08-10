@@ -12,13 +12,14 @@ let accessToken = "";
 
 exports.handler = (event, context) => {
 	function refreshAccessToken() {
+		const base64EncodedString = `${clientId}:${clientSecret}`.toString(
+			"base64"
+		);
 		return fetch(`${spotifyAccountsBaseUri}/api/token`, {
 			method: "POST",
 			body: `grant_type=refresh&refresh_token=${refreshToken}`,
 			headers: {
-				Authorization: `Basic ${new Buffer(
-					`${clientId}:${clientSecret}`
-				).toString("base64")}`,
+				Authorization: `Basic ${base64EncodedString}`,
 			},
 		})
 			.then((response) => {
