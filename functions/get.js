@@ -29,7 +29,7 @@ exports.handler = (event, context) => {
 			},
 		})
 			.then((response) => {
-				return response.json();
+				return response.text();
 			})
 			.then((data) => console.log(data));
 	}
