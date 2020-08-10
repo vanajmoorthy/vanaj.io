@@ -23,14 +23,10 @@ exports.handler = (event, context) => {
 			headers: {
 				Authorization: `Basic ${base64EncodedString}`,
 			},
-		})
-			.then((response) => {
-				response.json();
-			})
-			.then((data) => {
-				accessToken = data;
-				console.log(accessToken);
-			});
+		}).then((response) => {
+			accessToken = response;
+			console.log(accessToken);
+		});
 	}
 
 	function getSongs() {
