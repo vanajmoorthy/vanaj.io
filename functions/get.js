@@ -10,22 +10,19 @@ const refreshToken =
 	"AQC8YqyeDELEF-XOTNONaBZnzYztSWxBTeslQLPkKQxHQcWgo4i8Rm-2n4aRaL64mVUuS2ydj4Bo_NFk__Z53z4vE1CMPn3xjeenfeVbtaLubiygmxgJDlN_9RmwxNUzd68";
 let accessToken = "";
 
-exports.handler = (event, context) => {
-	function refreshAccessToken() {
+exports.handler = async (event, context) => {
+	async function refreshAccessToken() {
 		const base64EncodedString = `${clientId}:${clientSecret}`.toString(
 			"base64"
 		);
-		return fetch(`${spotifyAccountsBaseUri}/api/token`, {
+		const response = await fetch(`${spotifyAccountsBaseUri}/api/token`, {
 			method: "POST",
 			body: `grant_type=refresh&refresh_token=${refreshToken}`,
 			headers: {
 				Authorization: `Basic ${base64EncodedString}`,
 			},
-		})
-			.then((response) => {
-				console.log(response);
-			})
-			.then((data) => console.log(data));
+		});
+		console.log(response);
 	}
 
 	function getSongs() {
