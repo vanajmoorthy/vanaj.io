@@ -52,8 +52,6 @@ export default {
 				this.artist1 = firstThree[0].track.artists[0].name;
 				this.artist2 = firstThree[1].track.artists[0].name;
 				this.artist3 = firstThree[2].track.artists[0].name;
-
-				console.log(this.artist1);
 			});
 	},
 };
