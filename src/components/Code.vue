@@ -168,7 +168,7 @@ export default {
 	grid-gap: 1rem;
 	margin: 0 auto;
 	display: grid;
-	height: 100%;
+	height: 320px;
 	overflow: hidden;
 }
 
@@ -179,7 +179,7 @@ export default {
 }
 
 .expandedCards {
-	height: 100% !important;
+	height: 100%;
 }
 
 @media (min-width: 600px) {
