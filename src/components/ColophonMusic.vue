@@ -35,23 +35,23 @@ export default {
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data);
-				let res = data.items.sort((a, b) => {
-					return a.played_at < b.played_at
-						? 1
-						: a.played_at > b.played_at
-						? -1
-						: 0;
-				});
-				let firstThree = res.slice(0, 3);
-				console.log(firstThree);
+				// let res = data.items.sort((a, b) => {
+				// 	return a.played_at < b.played_at
+				// 		? 1
+				// 		: a.played_at > b.played_at
+				// 		? -1
+				// 		: 0;
+				// });
+				// let firstThree = res.slice(0, 3);
+				// console.log(firstThree);
 
-				this.song1 = firstThree[0].track.name;
-				this.song2 = firstThree[1].track.name;
-				this.song3 = firstThree[2].track.name;
+				// this.song1 = firstThree[0].track.name;
+				// this.song2 = firstThree[1].track.name;
+				// this.song3 = firstThree[2].track.name;
 
-				this.artist1 = firstThree[0].track.artists[0].name;
-				this.artist2 = firstThree[1].track.artists[0].name;
-				this.artist3 = firstThree[2].track.artists[0].name;
+				// this.artist1 = firstThree[0].track.artists[0].name;
+				// this.artist2 = firstThree[1].track.artists[0].name;
+				// this.artist3 = firstThree[2].track.artists[0].name;
 			});
 	},
 };

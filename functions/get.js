@@ -2,17 +2,10 @@ import fetch from "node-fetch";
 import encoding from "encoding";
 
 const API_ENDPOINT =
-	"https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=vanajmoorthy&api_key=027290639419a799cfc42d71d39ec7aa&format=json";
+	"https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rj&api_key=027290639419a799cfc42d71d39ec7aa&format=json";
 
 exports.handler = async (event, context) => {
-	return fetch(API_ENDPOINT, {
-		headers: {
-			Accept: "application/json",
-			"Content-Type": "application/json",
-			Authorization:
-				"Bearer BQC2oaaAz1bh7725ai_BfWTI8yL8kxFB4LTfoUxCOkntYiOLM68dCM3F1JYhK8NkcuzyIkoqGEYqZX99TBypjGeYDVkW3zwNsbYYYBuZ0OC1dnJdKrUDf3UNrL9zVEWXlIwG_JpHsHkQ9Q4vJ37IoBLlBjARwN_615rDBqaz",
-		},
-	})
+	return fetch(API_ENDPOINT)
 		.then((response) => response.json())
 		.then((data) => ({
 			statusCode: 200,
