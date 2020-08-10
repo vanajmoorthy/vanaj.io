@@ -17,9 +17,7 @@ exports.handler = (event, context) => {
 		);
 		return fetch(`${spotifyAccountsBaseUri}/api/token`, {
 			method: "POST",
-			body: JSON.stringify(
-				`grant_type=refresh&refresh_token=${refreshToken}`
-			),
+			body: `grant_type=refresh&refresh_token=${refreshToken}`,
 			headers: {
 				Authorization: `Basic ${base64EncodedString}`,
 			},
