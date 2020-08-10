@@ -20,7 +20,7 @@ exports.handler = (event, context) => {
 			grant_type: "authorization_code",
 			code:
 				"AQDphVz-i9MVeZciiAscN_bAEqmWeBzu3QOQ3BYgaWuQyxdj-wG5xWntllQlVTi1CHoRyHwHPX24G80HuzGI6HM41o_4xjy0TzpT_rPKww9U8VbFKPGnZpDYKG8YzQSAF9NZd7BjwLevR_HIXdAWdGdPOCqWNz6kDWOlKZCYuI1ZExDM1iFBEVvyN1qb6ULZ6vGF9g18pA",
-			redirect_uri = "https://vanajmoorthy.com"
+			redirect_uri: "https://vanajmoorthy.com",
 		};
 		return fetch(`${spotifyAccountsBaseUri}/api/token`, {
 			method: "POST",
