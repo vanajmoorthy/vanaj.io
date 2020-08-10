@@ -38,8 +38,6 @@ exports.handler = (event, context) => {
 				statusCode: 200,
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Methods": "*",
-					"Access-Control-Allow-Headers": "*",
 					"Cache-Control": "public,max-age=60",
 				},
 				body: JSON.stringify(data),
@@ -48,9 +46,6 @@ exports.handler = (event, context) => {
 				statusCode: 422,
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Methods": "*",
-					"Access-Control-Allow-Headers": "*",
-					"Cache-Control": "public,max-age=60",
 				},
 				body: String(error),
 			}));
