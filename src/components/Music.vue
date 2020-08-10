@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>Music</h1>
-		<p>My most recently played tracks on Spotify are</p>
+		<p>My most recently played tracks on Spotify are:</p>
 		<ul>
 			<li>{{ song1 }} — {{ artist1 }}</li>
 			<li>{{ song2 }} — {{ artist2 }}</li>
@@ -32,7 +32,7 @@ h1 {
 	font-size: 1.8rem;
 	color: white;
 	font-weight: 500;
-	border-bottom: 10px solid #1b405e;
+	border-bottom: 10px solid #204665;
 	line-height: 0.4;
 	width: 75px;
 	margin-block-start: 0;
@@ -50,6 +50,11 @@ ul {
 	padding-inline-start: 20px;
 	list-style-type: hiragana;
 	margin-block-end: 0;
+}
+
+li {
+	line-height: 1.3;
+	padding-bottom: 4px;
 }
 
 @media screen and (max-width: 610px) {

@@ -122,7 +122,7 @@ body {
 	font-weight: 500;
 	color: white;
 	font-size: 1.8rem;
-	border-bottom: 10px solid #1b405e;
+	border-bottom: 10px solid #204665;
 	line-height: 0.4;
 	width: 40px;
 }

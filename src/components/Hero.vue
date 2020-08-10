@@ -80,7 +80,7 @@ h1 {
 p {
 	font-weight: 300;
 	font-size: 1rem;
-	line-height: 20px;
+	line-height: 1.3;
 	/* text-align: justify; */
 }
 

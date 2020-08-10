@@ -69,7 +69,7 @@ nav {
 	margin: 0 0 0 0;
 	font-size: 1.8rem;
 	font-weight: 600;
-	border-bottom: 6px solid #1b405e;
+	border-bottom: 6px solid #204665;
 	line-height: 0.4;
 }
 

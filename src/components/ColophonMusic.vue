@@ -34,24 +34,78 @@ export default {
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
-				// let res = data.items.sort((a, b) => {
-				// 	return a.played_at < b.played_at
-				// 		? 1
-				// 		: a.played_at > b.played_at
-				// 		? -1
-				// 		: 0;
-				// });
-				// let firstThree = res.slice(0, 3);
-				// console.log(firstThree);
+				function removeDuplicates(arr) {
+					const result = [];
+					const duplicatesIndices = [];
 
-				// this.song1 = firstThree[0].track.name;
-				// this.song2 = firstThree[1].track.name;
-				// this.song3 = firstThree[2].track.name;
+					arr.forEach((current, index) => {
+						if (duplicatesIndices.includes(index)) return;
 
-				// this.artist1 = firstThree[0].track.artists[0].name;
-				// this.artist2 = firstThree[1].track.artists[0].name;
-				// this.artist3 = firstThree[2].track.artists[0].name;
+						result.push(current);
+
+						for (
+							let comparisonIndex = index + 1;
+							comparisonIndex < arr.length;
+							comparisonIndex++
+						) {
+							const comparison = arr[comparisonIndex];
+							const currentKeys = Object.keys(current);
+							const comparisonKeys = Object.keys(comparison);
+
+							if (currentKeys.length !== comparisonKeys.length)
+								continue;
+
+							const currentKeysString = currentKeys
+								.sort()
+								.join("")
+								.toLowerCase();
+							const comparisonKeysString = comparisonKeys
+								.sort()
+								.join("")
+								.toLowerCase();
+							if (currentKeysString !== comparisonKeysString)
+								continue;
+
+							let valuesEqual = true;
+							for (let i = 0; i < currentKeys.length; i++) {
+								const key = currentKeys[i];
+								if (current[key] !== comparison[key]) {
+									valuesEqual = false;
+									break;
+								}
+							}
+							if (valuesEqual)
+								duplicatesIndices.push(comparisonIndex);
+						}
+					});
+
+					return result;
+				}
+
+				let res = data.recenttracks.track;
+				let songs = [];
+				for (let i = 0; i < res.length; i++) {
+					// add song name: artistName to object
+					let song = res[i].name;
+					let artist = res[i].artist["#text"];
+					let object = {
+						song,
+						artist,
+					};
+
+					songs.push(object);
+				}
+				let songStripped = removeDuplicates(songs);
+				let firstThree = songStripped.slice(0, 3);
+				console.log(firstThree);
+
+				this.song1 = firstThree[0].song;
+				this.song2 = firstThree[1].song;
+				this.song3 = firstThree[2].song;
+
+				this.artist1 = firstThree[0].artist;
+				this.artist2 = firstThree[1].artist;
+				this.artist3 = firstThree[2].artist;
 			});
 	},
 };

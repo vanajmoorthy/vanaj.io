@@ -45,4 +45,8 @@ div {
 	font-style: italic;
 	width: 70%;
 }
+
+p {
+	line-height: 1.3;
+}
 </style>
