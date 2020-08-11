@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<a :href="project.link" target="_blank" rel="noopener noreferrer">
-			<img :src="project.src" />
+			<img :src="project.src" alt="behance project" />
 		</a>
 	</div>
 </template>
