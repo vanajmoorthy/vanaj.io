@@ -70,11 +70,6 @@ export default {
 					link: "https://vanajmoorthy.com/gh/speechylang",
 				},
 				{
-					title: "Short",
-					emoji: "✂️",
-					link: "https://vanajmoorthy.com/gh/short",
-				},
-				{
 					title: "Obstacles",
 					emoji: "▶️",
 					link: "https://vanajmoorthy.com/obstacles",
