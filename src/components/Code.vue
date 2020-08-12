@@ -102,7 +102,7 @@ export default {
 				{
 					title: "Keylogger",
 					emoji: "🕵️",
-					link: "https://vanajmoorthy.com/gi/keylogger",
+					link: "https://vanajmoorthy.com/gh/keylogger",
 				},
 				{
 					title: "Enigma",
