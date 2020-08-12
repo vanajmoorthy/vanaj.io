@@ -17,11 +17,13 @@ export default {
 img {
 	height: 300px;
 	margin-right: 2.5rem;
+	transition: all 0.1s ease;
 }
 
 img:hover {
 	opacity: 0.5;
-	transition: opacity 0.1s ease;
+	transform: translateY(-10px);
+	transition: all 0.1s ease;
 }
 
 @media screen and (max-width: 1190px) {

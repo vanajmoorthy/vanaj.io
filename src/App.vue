@@ -94,12 +94,12 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #1a202c;
+	background: #2c3649;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #1b405e;
+	background: #20496b;
 }
 
 /* Handle on hover */
@@ -114,8 +114,9 @@ body {
 .art-container {
 	display: flex;
 	overflow-x: scroll;
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none;
+	/* -ms-overflow-style: none;  */
+	/* scrollbar-width: none; */
+	padding: 10px 0;
 }
 
 .art {
@@ -125,10 +126,6 @@ body {
 	border-bottom: 10px solid #204665;
 	line-height: 0.4;
 	width: 40px;
-}
-
-.art-container::-webkit-scrollbar {
-	display: none;
 }
 
 @media screen and (max-width: 1500px) {
