@@ -1,21 +1,18 @@
 # vanajmoorthy.com
 
+### 🐢 My personal website
+
+Hosted at https://vanajmoorthy.com
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3852719d-64dc-44fe-8ee3-6cbf850f248f/deploy-status)](https://app.netlify.com/sites/vanajmoorthy/deploys)
 
-## Project setup
-```
-npm install
-```
+* Clone the website
+* Grab dependencies with `npm i`
+* Serve with `npm start`
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Technologies used: Vue.js, Font Awesome, Behance API, Last.fm API.
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For older versions of my website, check 
+
+https://github.com/vanajmoorthy/v4, https://github.com/vanajmoorthy/v3, https://github.com/vanajmoorthy/v2 or https://github.com/vanajmoorthy/v1
