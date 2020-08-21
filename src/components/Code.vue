@@ -146,6 +146,7 @@ export default {
 				},
 			],
 		};
+		// eslint-disable-next-line no-unreachable
 		isExpanded = false;
 	},
 	methods: {
