@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "node redirects/prebuild.js && vue-cli-service build && netlify-lambda build functions",
     "deploy": "git add -A && git commit -m 'redirects' && git push",
+    "apps": "git add -A && git commit -m ' Add to apps' && git push",
     "start": "npm run serve"
   },
   "dependencies": {
