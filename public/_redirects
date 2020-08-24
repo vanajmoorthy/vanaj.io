@@ -60,8 +60,18 @@ https://vanajmoorthy.com/blog/* https://blog-vanajmoorthy.netlify.app/:splat 200
 https://vanajmoorthy.com/gravity https://vanajmoorthy.com/gravity/index.html 302
 https://vanajmoorthy.com/gravity/* https://gravity-vanajmoorthy.netlify.app/:splat 200!
 
+https://vanajmoorthy.com/agastya https://vanajmoorthy.com/agastya/index.html 302
+https://vanajmoorthy.com/agastya/* https://agastya-vanajmoorthy.netlify.app/:splat 200!
+
+https://vanajmoorthy.com/lottietest https://vanajmoorthy.com/lottietest/index.html 302
+https://vanajmoorthy.com/lottietest/* https://lottietest-vanajmoorthy.netlify.app/:splat 200!
+
+https://vanajmoorthy.com/fourier-series https://vanajmoorthy.com/fourier-series/index.html 302
+https://vanajmoorthy.com/fourier-series/* https://fourier-series-vanajmoorthy.netlify.app/:splat 200!
+
+https://vanajmoorthy.com/fourier https://vanajmoorthy.com/fourier/index.html 302
+https://vanajmoorthy.com/fourier/* https://fourier-vanajmoorthy.netlify.app/:splat 200!
+
 
 # all github redirects
-https://vanajmoorthy.com/v4/* https://v4-vanajmoorthy.netlify.app/:splat 200!
-
 https://vanajmoorthy.com/gh/* https://github.com/vanajmoorthy/:splat 302
