@@ -47,6 +47,8 @@ export default {
 		};
 	},
 	mounted() {
+		// This will break one day
+		// TODO: Use own API key
 		const url =
 			"https://www.behance.net/v2/users/vanajmoorthy/projects?client_id=ZLBxK9rEfHwJf9K0rmseNr2fS2gS2HJW";
 		$.ajax({
@@ -58,9 +60,10 @@ export default {
 			.done((response) => {
 				let data = [];
 				let res = response.projects;
+				console.log(res);
 				for (let i = 0; i < res.length; i++) {
 					data.push({
-						src: res[i].covers.original,
+						src: res[i].covers.max_808,
 						link: res[i].url,
 					});
 				}
