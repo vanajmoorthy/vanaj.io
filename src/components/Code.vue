@@ -128,7 +128,7 @@ export default {
 				{
 					title: "Visualise",
 					emoji: "🎤",
-					link: "https://vanajmoorthy.com/link",
+					link: "https://vanajmoorthy.com/visualise",
 				},
 				{
 					title: "Graph",
