@@ -57,7 +57,7 @@ export default {
 				{
 					title: "Blog",
 					emoji: "✒️",
-					link: "https://vanajmoorthy.com/blog",
+					link: "https://vanajmoorthy.com/gh/blog-api",
 				},
 				{
 					title: "Dogs",
