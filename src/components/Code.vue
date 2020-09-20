@@ -40,6 +40,11 @@ export default {
 					link: "https://github.com/vanajmoorthy/create",
 				},
 				{
+					title: "Tree",
+					emoji: "🌲",
+					link: "https://vanajmoorthy.com/tree",
+				},
+				{
 					title: "Bee",
 					emoji: "🐝",
 					link: "https://github.com/vanajmoorthy/bee",
