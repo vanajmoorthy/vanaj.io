@@ -90,19 +90,25 @@ export default {
 					link: "https://vanajmoorthy.com/tictactoe",
 				},
 				{
+					title: "Pi3",
+					emoji: "🥧",
+					link:
+						"https://github.com/vanajmoorthy/bailey-borwein-plouffe",
+				},
+				{
 					title: "Pi2",
 					emoji: "🥧",
 					link: "https://vanajmoorthy.com/pi2",
 				},
 				{
-					title: "Yoda",
-					emoji: "👽",
-					link: "https://vanajmoorthy.com/yoda",
-				},
-				{
 					title: "Pi",
 					emoji: "🥧",
 					link: "https://vanajmoorthy.com/pi",
+				},
+				{
+					title: "Yoda",
+					emoji: "👽",
+					link: "https://vanajmoorthy.com/yoda",
 				},
 				{
 					title: "Keylogger",
