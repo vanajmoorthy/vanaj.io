@@ -91,6 +91,12 @@ body {
 	font-family: "canada-type-gibson";
 }
 
+#app {
+	/* display: flex; */
+	/* justify-content: center; */
+}
+
+
 ::-webkit-scrollbar {
 	width: 5px;
 }
@@ -111,7 +117,8 @@ body {
 }
 
 .home {
-	margin: 2rem 24rem;
+	max-width: 870px;
+	margin: 2rem auto;
 }
 
 .art-container {
