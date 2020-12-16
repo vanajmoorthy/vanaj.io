@@ -11,10 +11,17 @@
 			</div>
 			<div class="bottom-text">
 				<p class="b-margin">
-					I'm an incoming freshman at the University of St. Andrews
-					and an outgoing senior from The Shri Ram School. I'm an avid
-					web developer with a focus on front-end and back-end in
-					Node.js.
+					I'm a first-year CS student at the University of St.
+					Andrews, an ex-student of The Shri Ram School and a
+					co-founder at
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						class="orange"
+						href="https://theorangeyak.co"
+						>theorangeyak.co</a
+					>. I'm an avid web developer with a focus on front-end and
+					back-end in Node.js.
 				</p>
 				<p class="b-margin">
 					I also love digital art and animation. I do 3D art in
@@ -24,11 +31,11 @@
 					certification from PADI.
 				</p>
 				<p>
-					My favourite musicians include John Mayer, Vulfpeck and
+					My favourite musicians include Pink Floyd, Vulfpeck and
 					Andrew Bird; my favourite book is The Hitchhiker's Guide to
 					the Galaxy by Douglas Adams; my favourite poem is
 					"Ozymandias by Percy Bysshe Shelly"; and my favourite colour
-					is #1da7ea.
+					is <span class="color">#1da7ea</span>.
 				</p>
 			</div>
 		</div>
@@ -42,6 +49,15 @@ export default {
 </script>
 
 <style scoped>
+.color {
+	/* border-bottom: 4px solid #1da7ea; */
+	color: #1da7ea;
+}
+
+.orange {
+	color: #ff9c4a;
+}
+
 img {
 	height: 400px;
 	border-radius: 8px;
