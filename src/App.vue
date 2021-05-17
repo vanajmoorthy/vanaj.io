@@ -67,7 +67,7 @@ export default {
 				console.log(res);
 				for (let i = 0; i < res.length; i++) {
 					data.push({
-						src: res[i].covers.max_808,
+						src: res[i].covers.original,
 						link: res[i].url,
 					});
 				}
