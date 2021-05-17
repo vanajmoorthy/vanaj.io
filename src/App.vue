@@ -95,11 +95,6 @@ body {
 	font-family: "canada-type-gibson";
 }
 
-#app {
-	/* display: flex; */
-	/* justify-content: center; */
-}
-
 ::-webkit-scrollbar {
 	width: 5px;
 }
