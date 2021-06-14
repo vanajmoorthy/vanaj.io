@@ -2,6 +2,7 @@
 	<div>
 		<a :href="project.link" target="_blank" rel="noopener noreferrer">
 			<img :src="project.src" alt="behance project" />
+			<h1 class="title">{{ project.name }}</h1>
 		</a>
 	</div>
 </template>
@@ -14,29 +15,38 @@ export default {
 </script>
 
 <style scoped>
+div {
+	margin-right: 1rem;
+	transition: 0.2s ease all;
+}
+
 img {
 	height: 300px;
-	margin-right: 2.5rem;
 	transition: all 0.1s ease;
 }
 
-img:hover {
+.title {
+	color: white;
+	font-weight: 500;
+	text-align: center;
+	max-width: 300px;
+	text-decoration: none;
+	margin: 1rem auto;
+	font-size: 1.2rem;
+	opacity: 1;
+	transition: 0.2s ease all;
+	line-height: 1;
+}
+
+div:hover {
 	opacity: 0.5;
 	transform: translateY(-10px);
-	transition: all 0.1s ease;
+	transition: all 0.2s ease;
 }
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 800px) {
 	img {
-		height: 250px;
-		margin-right: 2rem;
-	}
-}
-
-@media screen and (max-width: 460px) {
-	img {
-		height: 200px;
-		margin-right: 1rem;
+		height: 240px;
 	}
 }
 </style>

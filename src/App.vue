@@ -64,11 +64,12 @@ export default {
 			.done((response) => {
 				let data = [];
 				let res = response.projects;
-				console.log(res);
+				console.log(response);
 				for (let i = 0; i < res.length; i++) {
 					data.push({
 						src: res[i].covers.original,
 						link: res[i].url,
+						name: res[i].name,
 					});
 				}
 				this.projects = data;
@@ -125,6 +126,7 @@ body {
 	/* -ms-overflow-style: none;  */
 	/* scrollbar-width: none; */
 	padding: 10px 0;
+	height: min-content;
 }
 
 .art {
