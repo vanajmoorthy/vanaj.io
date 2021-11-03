@@ -1,7 +1,7 @@
 <template>
 	<div class="hero">
 		<div class="image-holder">
-			<img src="../assets/me550.jpg" alt="Image of Vanaj Moorthy" />
+			<img src="../assets/me-new.png" alt="Image of Vanaj Moorthy" />
 		</div>
 		<div class="text">
 			<div class="top-text">
@@ -11,7 +11,7 @@
 			</div>
 			<div class="bottom-text">
 				<p class="b-margin">
-					I'm a first-year CS student at the University of St.
+					I'm a second-year CS student at the University of St.
 					Andrews, an ex-student of The Shri Ram School and a
 					co-founder at
 					<a
