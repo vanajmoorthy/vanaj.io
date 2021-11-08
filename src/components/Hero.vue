@@ -12,15 +12,7 @@
 			<div class="bottom-text">
 				<p class="b-margin">
 					I'm a second-year CS student at the University of St.
-					Andrews, an ex-student of The Shri Ram School and a
-					co-founder at
-					<a
-						target="_blank"
-						rel="noopener noreferrer"
-						class="orange"
-						href="https://theorangeyak.co"
-						>theorangeyak.co</a
-					>. I'm an avid web developer with a focus on front-end and
+					Andrews and an ex-student of The Shri Ram School. I'm an avid web developer with a focus on front-end and
 					back-end in Node.js.
 				</p>
 				<p class="b-margin">
