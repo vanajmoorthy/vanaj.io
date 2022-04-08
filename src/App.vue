@@ -67,7 +67,7 @@ export default {
 				console.log(response);
 				for (let i = 0; i < res.length; i++) {
 					data.push({
-						src: res[i].covers.original,
+						src: res[i].covers.max_808,
 						link: res[i].url,
 						name: res[i].name,
 					});
