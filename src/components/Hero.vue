@@ -11,9 +11,9 @@
 			</div>
 			<div class="bottom-text">
 				<p class="b-margin">
-					I'm a second-year CS student at the University of St.
-					Andrews and an ex-student of The Shri Ram School. I'm an avid web developer with a focus on front-end and
-					back-end in Node.js.
+					I'm a third-year CS student at the University of St. Andrews
+					and an ex-student of The Shri Ram School. I'm an avid web
+					developer with a focus on front-end and back-end in Node.js.
 				</p>
 				<p class="b-margin">
 					I also love digital art and animation. I do 3D art in
