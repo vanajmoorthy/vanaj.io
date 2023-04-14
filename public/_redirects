@@ -72,6 +72,18 @@ https://vanajmoorthy.com/fourier-series/* https://fourier-series-vanajmoorthy.ne
 https://vanajmoorthy.com/fourier https://vanajmoorthy.com/fourier/index.html 302
 https://vanajmoorthy.com/fourier/* https://fourier-vanajmoorthy.netlify.app/:splat 200!
 
+https://vanajmoorthy.com/tree https://vanajmoorthy.com/tree/index.html 302
+https://vanajmoorthy.com/tree/* https://tree-vanajmoorthy.netlify.app/:splat 200!
+
+https://vanajmoorthy.com/decision https://vanajmoorthy.com/decision/index.html 302
+https://vanajmoorthy.com/decision/* https://decision-vanajmoorthy.netlify.app/:splat 200!
+
+https://vanajmoorthy.com/simar https://vanajmoorthy.com/simar/index.html 302
+https://vanajmoorthy.com/simar/* https://simar-vanajmoorthy.netlify.app/:splat 200!
+
+https://vanajmoorthy.com/contract https://vanajmoorthy.com/contract/index.html 302
+https://vanajmoorthy.com/contract/* https://contract-vanajmoorthy.netlify.app/:splat 200!
+
 
 # all github redirects
 https://vanajmoorthy.com/gh/* https://github.com/vanajmoorthy/:splat 302

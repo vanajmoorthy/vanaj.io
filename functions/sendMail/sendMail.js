@@ -1,46 +1,28 @@
 require("dotenv").config();
 
-const Mailjet = require("node-mailjet");
-const mailjet = Mailjet.apiConnect(
-	process.env.MJ_APIKEY_PUBLIC,
-	process.env.MJ_APIKEY_PRIVATE
-);
+const formData = require("form-data");
+const Mailgun = require("mailgun.js");
+const mailgun = new Mailgun(formData);
+const mg = mailgun.client({
+	username: "api",
+	key: process.env.MAILGUN_API_KEY,
+});
 
 exports.handler = async (event) => {
-	const request = mailjet.post("send", { version: "v3.1" }).request({
-		Messages: [
-			{
-				From: {
-					Email: "vanajmoorthy@gmail.com",
-					Name: "Vanaj Relationship Management Service",
-				},
-				To: [
-					{
-						Email: event.queryStringParameters.email,
-					},
-				],
-				TemplateID: 4727192,
-				TemplateLanguage: true,
-				Subject: "Congratulations on renewing your relationship!",
-				Variables: {
-					partyTwoName: event.queryStringParameters.partyTwoName,
-					partyOneName: event.queryStringParameters.partyOneName,
-				},
-			},
-		],
-	});
+	const result = await mg.messages.create(
+		"sandbox7bff322fd80f4a34a7d1616ea17f3914.mailgun.org",
+		{
+			from:
+				"Vanaj Relationship Management Service <mailgun@sandbox7bff322fd80f4a34a7d1616ea17f3914.mailgun.org>",
+			to: [event.queryStringParameters.email],
+			subject: "Congratulations on renewing your relationship!",
+			text: "Congratulations on renewing your relationship!",
+			html: `<h1>Congratulations on renewing your relationship!</h1><p>Signed by ${event.queryStringParameters.partyOneName} and ${event.queryStringParameters.partyTwoName}</p>`,
+		}
+	);
 
-	return request
-		.then((result) => {
-			return {
-				statusCode: 200,
-				body: JSON.stringify(result.body),
-			};
-		})
-		.catch((err) => {
-			return {
-				statusCode: err.statusCode,
-				body: JSON.stringify(err),
-			};
-		});
+	return {
+		statusCode: result.status,
+		body: JSON.stringify(result.messages),
+	};
 };
