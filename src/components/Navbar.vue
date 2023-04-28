@@ -5,20 +5,6 @@
 		</div>
 		<ul>
 			<a
-				href="https://twitter.com/vanajmoorthy"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<li class="first"><i class="fab fa-twitter fa-lg"></i></li>
-			</a>
-			<a
-				href="https://instagram.com/vanajmoorthy"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<li><i class="fab fa-instagram fa-lg"></i></li>
-			</a>
-			<a
 				href="https://github.com/vanajmoorthy"
 				target="_blank"
 				rel="noopener noreferrer"
