@@ -125,7 +125,7 @@ li:hover {
 @media screen and (max-width: 530px) {
 	ul {
 		width: 100%;
-		justify-content: space-between;
+		/* justify-content: space-between; */
 	}
 
 	.first {
