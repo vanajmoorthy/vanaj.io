@@ -2,14 +2,8 @@
 	<div class="row">
 		<Colophon></Colophon>
 		<div class="divider"></div>
-		<Music
-			:song1="song1"
-			:song2="song2"
-			:song3="song3"
-			:artist1="artist1"
-			:artist2="artist2"
-			:artist3="artist3"
-		></Music>
+		<Music :song1="song1" :song2="song2" :song3="song3" :artist1="artist1" :artist2="artist2" :artist3="artist3">
+		</Music>
 	</div>
 </template>
 
@@ -30,7 +24,7 @@ export default {
 		};
 	},
 	mounted() {
-		const url = "https://vanajmoorthy.com/.netlify/functions/get";
+		const url = "https://vanaj.io/.netlify/functions/get";
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => {
@@ -130,6 +124,7 @@ export default {
 	.divider {
 		display: block;
 	}
+
 	.row {
 		flex-direction: column;
 	}

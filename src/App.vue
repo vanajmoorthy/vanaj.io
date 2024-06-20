@@ -8,11 +8,7 @@
 			<h1 class="art">Art</h1>
 
 			<div class="art-container">
-				<Art
-					v-for="project in projects"
-					:project="project"
-					:key="project"
-				></Art>
+				<Art v-for="project in projects" :project="project" :key="project"></Art>
 			</div>
 
 			<HorizontalDivider></HorizontalDivider>
