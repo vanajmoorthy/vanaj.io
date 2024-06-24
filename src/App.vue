@@ -240,13 +240,13 @@ body {
 
 @media screen and (max-width: 1500px) {
 	.home {
-		margin: 2rem 20rem;
+		margin: 2rem 18rem;
 	}
 }
 
 @media screen and (max-width: 1380px) {
 	.home {
-		margin: 2rem 15rem;
+		margin: 2rem 12rem;
 	}
 }
 

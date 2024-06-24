@@ -10,13 +10,8 @@
 		</div>
 
 		<div class="cards">
-			<Card
-				v-for="card in cards"
-				:key="card.title"
-				:title="card.title"
-				:emoji="card.emoji"
-				:link="card.link"
-			></Card>
+			<Card v-for="card in cards" :key="card.title" :title="card.title" :emoji="card.emoji" :link="card.link">
+			</Card>
 		</div>
 	</div>
 </template>
@@ -156,27 +151,34 @@ export default {
 					link: "https://vanaj.io/snake",
 				},
 			],
+			isExpanded: false
 		};
-		// eslint-disable-next-line no-unreachable
-		isExpanded = false;
 	},
 	methods: {
 		expandDiv() {
 			const div = document.querySelector(".cards");
 			const chevron = document.getElementById("chevron");
+			const fullHeight = Array.from(div.children).reduce((total, child) => total + child.offsetHeight + parseInt(window.getComputedStyle(child).marginBottom, 10), 0);
+
+			// Get current viewport width
+			const viewportWidth = window.innerWidth;
+
+			// Set max height based on viewport width
+			const maxHeight = viewportWidth < 1015 ? '275px' : '320px';
+			const expandedMaxHeight = viewportWidth < 1015 ? '4000px' : '1400px';
 
 			if (!this.isExpanded) {
-				div.classList.add("expandedCards");
+				div.style.maxHeight = fullHeight < parseInt(expandedMaxHeight) ? expandedMaxHeight : fullHeight + 'px'; // Use the smaller of calculated fullHeight or expandedMaxHeight
 				chevron.style.transform = "rotate(180deg)";
 				this.isExpanded = true;
 			} else {
-				div.classList.remove("expandedCards");
+				div.style.maxHeight = maxHeight; // Use different max heights based on the screen width
 				chevron.style.transform = "rotate(0deg)";
 				this.isExpanded = false;
 			}
-			console.log(div.classList);
 		},
 	},
+
 };
 </script>
 
@@ -185,19 +187,29 @@ export default {
 	grid-gap: 1rem;
 	margin: 0 auto;
 	display: grid;
-	height: 320px;
+	max-height: 320px;
+	/* This will now be set by JS, initial value may not be needed unless for initial load */
 	overflow: hidden;
+	transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+
+.expandedCards {
+	max-height: 1400px;
+	/* Increase max-height when expanded */
+	padding-bottom: 1rem;
+	/* Add some padding if needed */
 }
 
 @media screen and (max-width: 1015px) {
 	.cards {
-		height: 275px;
+		/* Remove or adjust this if JavaScript is handling the changes */
+		max-height: 275px;
+		/* Initial max-height for smaller screens, handled by JS */
 	}
 }
 
-.expandedCards {
-	height: 100%;
-}
+
 
 @media (min-width: 600px) {
 	.cards {
@@ -221,27 +233,31 @@ h1 {
 	line-height: 0.4;
 	width: 70px;
 }
+
 .row {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
+
 svg {
 	color: white;
 }
 
+
 .row button {
+	background-color: var(--primary);
 	border: none;
 	padding: 10px;
 	border-radius: 8px;
-	background-color: var(--primary);
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	/* Smooth background color transition */
 }
 
 .row button:hover {
 	background-color: var(--hover);
-	transition: background-color ease 0.2s;
-	cursor: pointer;
 }
 
 .row button:focus {
