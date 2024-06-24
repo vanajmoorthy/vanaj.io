@@ -6,7 +6,7 @@
 		<div class="text">
 			<div class="top-text">
 				<h1>
-					Hi, I'm Vanaj. I'm a developer and artist from New Delhi, currently based in London 📍.
+					Hi, I'm Vanaj. I'm a developer and artist from New Delhi, currently based in London 📍
 				</h1>
 			</div>
 			<div class="bottom-text">
@@ -76,6 +76,7 @@ img {
 h1,
 p {
 	margin: 0;
+	color: var(--text);
 }
 
 h1 {
@@ -96,7 +97,7 @@ p {
 	}
 
 	img {
-		height: 150px;
+		height: 160px;
 		width: auto;
 		clip-path: circle(60px at center);
 		position: relative;

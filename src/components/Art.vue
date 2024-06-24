@@ -26,7 +26,7 @@ img {
 }
 
 .title {
-	color: white;
+	color: var(--text);
 	font-weight: 500;
 	text-align: center;
 	max-width: 300px;

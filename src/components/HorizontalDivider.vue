@@ -12,7 +12,7 @@ export default {
 div {
 	width: 100%;
 	height: 3px;
-	background-color: #1b405e;
+	background-color: var(--primary);
 	margin: 2rem 0;
 }
 </style>

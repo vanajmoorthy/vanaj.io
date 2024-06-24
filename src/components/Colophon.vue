@@ -69,7 +69,7 @@ export default {
 
 <style scoped>
 a {
-	color: white;
+	color: var(--text);
 }
 
 div {
@@ -77,15 +77,15 @@ div {
 }
 h1 {
 	font-size: 1.8rem;
-	color: white;
+	color: var(--text);
 	font-weight: 500;
-	border-bottom: 10px solid #204665;
+	border-bottom: 10px solid var(--border);
 	line-height: 0.4;
 	width: 145px;
 	margin-block-start: 0;
 }
 p {
-	color: white;
+	color: var(--text);
 	font-weight: 300;
 	font-size: 1rem;
 	line-height: 1.3;

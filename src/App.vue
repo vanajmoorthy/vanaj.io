@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<div class="home">
-			<Navbar></Navbar>
+			<Navbar @themeChanged="changeTheme"></Navbar>
 			<HorizontalDivider></HorizontalDivider>
 			<Hero></Hero>
 			<HorizontalDivider></HorizontalDivider>
@@ -43,14 +43,62 @@ export default {
 	},
 	data() {
 		return {
-			projects: null,
+			currentTheme: 'dark',
+			themes: {
+				dark: {
+					background: '#1a202c',
+					text: '#fff',
+					primary: '#1b405e',
+					border: "#204665",
+					selector: "#7eaacd",
+					github: "#3ed3a1",
+					envelope: "#e3655b",
+					square: "#228cdb",
+					hover: "#15334b"
+				},
+				light: {
+					background: '#f8f8f8',
+					text: '#3b3c46',
+					primary: '#8cccff',
+					border: "#6996bb",
+					selector: "#fff",
+					github: "#3b4b46",
+					envelope: "#fa877e",
+					square: "#0a82db",
+					hover: "#5195cb"
+
+				},
+				blue: {
+					background: '#122b3f',
+					text: '#fff',
+					primary: '#20496b',
+					border: "#204665",
+					selector: "#fff",
+					github: "#3ed3a1",
+					envelope: "#e3655b",
+					square: "#228cdb",
+					hover: "#15334b"
+				}
+			},
+			projects: null
 		};
 	},
+	methods: {
+		changeTheme(theme) {
+			this.currentTheme = theme;
+			localStorage.setItem('currentTheme', theme);  // Save theme to local storage
+			const themeData = this.themes[theme];
+			for (const key in themeData) {
+				document.documentElement.style.setProperty(`--${key}`, themeData[key]);
+			}
+		}
+	},
+
 	mounted() {
-		// This will break one day
-		// TODO: Use own API key
-		const url =
-			"https://www.behance.net/v2/users/vanajmoorthy/projects?client_id=ZLBxK9rEfHwJf9K0rmseNr2fS2gS2HJW";
+		const savedTheme = localStorage.getItem('currentTheme') || 'dark';  // Default to 'dark' if no theme stored
+		this.changeTheme(savedTheme);
+
+		const url = "https://www.behance.net/v2/users/vanajmoorthy/projects?client_id=ZLBxK9rEfHwJf9K0rmseNr2fS2gS2HJW";
 		$.ajax({
 			url: url,
 			type: "get",
@@ -74,6 +122,7 @@ export default {
 				console.error(error);
 			});
 	},
+
 };
 </script>
 
@@ -87,28 +136,53 @@ html {
 	margin: 0;
 }
 
+:root {
+	--background: #1a202c;
+	--primary: #1b405e;
+	--border: #204665;
+	/* default dark theme background */
+	--text: #fff;
+	/* default text color */
+	--primary-color: #20496b;
+	/* default primary color */
+	--scrollbar-bg: #8cccff;
+	/* scrollbar background */
+	--scrollbar-thumb: #3d8bc9;
+	/* scrollbar thumb */
+	--scrollbar-thumb-hover: #225f8f;
+	/* scrollbar thumb hover */
+	--selector: #fff;
+	--github: #3ed3a1;
+	--envelope: #e3655b;
+	--square: #228cdb;
+	--hover: #15334b;
+	/* color for dividers like under headings */
+}
+
+
 body {
-	background-color: #1a202c;
+	background-color: var(--background);
+	color: var(--text);
 	font-family: "canada-type-gibson";
 }
+
+
+
 
 ::-webkit-scrollbar {
 	width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-	background: #2c3649;
+	background: var(--scrollbar-bg);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #20496b;
+	background: var(--scrollbar-thumb);
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #122b3f;
+	background: var(--scrollbar-thumb-hover);
 }
 
 .home {
@@ -127,9 +201,9 @@ body {
 
 .art {
 	font-weight: 500;
-	color: white;
+	color: var(--text-color);
 	font-size: 1.8rem;
-	border-bottom: 10px solid #204665;
+	border-bottom: 10px solid var(--border);
 	line-height: 0.4;
 	width: 40px;
 }

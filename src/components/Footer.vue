@@ -36,7 +36,8 @@ export default {
 }
 
 div {
-	color: white;
+	color: var(--text);
+
 }
 
 .row {

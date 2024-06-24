@@ -216,8 +216,8 @@ export default {
 h1 {
 	font-size: 1.8rem;
 	font-weight: 500;
-	color: white;
-	border-bottom: 10px solid #204665;
+	color: var(--text);
+	border-bottom: 10px solid var(--border);
 	line-height: 0.4;
 	width: 70px;
 }
@@ -235,11 +235,11 @@ svg {
 	border: none;
 	padding: 10px;
 	border-radius: 8px;
-	background-color: #1b405e;
+	background-color: var(--primary);
 }
 
 .row button:hover {
-	background-color: #15334b;
+	background-color: var(--hover);
 	transition: background-color ease 0.2s;
 	cursor: pointer;
 }
