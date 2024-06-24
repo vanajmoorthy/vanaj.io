@@ -1,8 +1,8 @@
-# vanajmoorthy.com
+# vanaj.io
 
 ### 🐢 My personal website
 
-Hosted at https://vanajmoorthy.com
+Hosted at https://vanaj.io
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3852719d-64dc-44fe-8ee3-6cbf850f248f/deploy-status)](https://app.netlify.com/sites/vanajmoorthy/deploys)
 
