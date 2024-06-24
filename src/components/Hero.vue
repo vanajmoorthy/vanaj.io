@@ -6,14 +6,13 @@
 		<div class="text">
 			<div class="top-text">
 				<h1>
-					Hi, I'm Vanaj. I'm a developer and artist from New Delhi.
+					Hi, I'm Vanaj. I'm a developer and artist from New Delhi, currently based in London 📍.
 				</h1>
 			</div>
 			<div class="bottom-text">
 				<p class="b-margin">
-					I'm a third-year CS student at the University of St. Andrews
-					and an ex-student of The Shri Ram School. I'm an avid web
-					developer with a focus on front-end and back-end in Node.js.
+					I'm an alumnus of the University of St. Andrews and an ex-student of The Shri Ram School. I'm an
+					avid full-stack web developer with a focus on front-end development.
 				</p>
 				<p class="b-margin">
 					I also love digital art and animation. I do 3D art in
@@ -23,10 +22,8 @@
 					certification from PADI.
 				</p>
 				<p>
-					My favourite musicians include Pink Floyd, Vulfpeck and
-					Andrew Bird; my favourite book is The Hitchhiker's Guide to
-					the Galaxy by Douglas Adams; my favourite poem is
-					"Ozymandias by Percy Bysshe Shelly"; and my favourite colour
+					My favourite musicians include Mdou Moctar, Vulfpeck and
+					Andrew Bird; my favourite author is Terry Pratchett; and my favourite colour
 					is <span class="color">#1da7ea</span>.
 				</p>
 			</div>
@@ -66,6 +63,7 @@ img {
 .hero {
 	display: flex;
 }
+
 .text {
 	height: 400px;
 	display: flex;
