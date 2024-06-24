@@ -4,4 +4,4 @@ $APP_REDIRECTS
 
 
 # all github redirects
-https://vanajmoorthy.com/gh/* https://github.com/vanajmoorthy/:splat 302
+https://vanaj.io/gh/* https://github.com/vanajmoorthy/:splat 302

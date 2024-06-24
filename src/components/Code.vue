@@ -42,7 +42,7 @@ export default {
 				{
 					title: "Tree",
 					emoji: "🌲",
-					link: "https://vanajmoorthy.com/tree",
+					link: "https://vanaj.io/tree",
 				},
 				{
 					title: "Bee",
@@ -52,42 +52,42 @@ export default {
 				{
 					title: "Gravity",
 					emoji: "🌎",
-					link: "https://vanajmoorthy.com/gravity",
+					link: "https://vanaj.io/gravity",
 				},
 				{
 					title: "Blog",
 					emoji: "✒️",
-					link: "https://vanajmoorthy.com/gh/blog-api",
+					link: "https://vanaj.io/gh/blog-api",
 				},
 				{
 					title: "Dogs",
 					emoji: "🐶",
-					link: "https://vanajmoorthy.com/dogs",
+					link: "https://vanaj.io/dogs",
 				},
 				{
 					title: "Morph",
 					emoji: "💠",
-					link: "https://vanajmoorthy.com/morph",
+					link: "https://vanaj.io/morph",
 				},
 				{
 					title: "cshell",
 					emoji: "🐚",
-					link: "https://vanajmoorthy.com/gh/cshell",
+					link: "https://vanaj.io/gh/cshell",
 				},
 				{
 					title: "Speechy",
 					emoji: "🐢",
-					link: "https://vanajmoorthy.com/gh/speechylang",
+					link: "https://vanaj.io/gh/speechylang",
 				},
 				{
 					title: "Obstacles",
 					emoji: "▶️",
-					link: "https://vanajmoorthy.com/obstacles",
+					link: "https://vanaj.io/obstacles",
 				},
 				{
 					title: "Tic Tac Toe",
 					emoji: "❌",
-					link: "https://vanajmoorthy.com/tictactoe",
+					link: "https://vanaj.io/tictactoe",
 				},
 				{
 					title: "Pi3",
@@ -98,62 +98,62 @@ export default {
 				{
 					title: "Pi2",
 					emoji: "🥧",
-					link: "https://vanajmoorthy.com/pi2",
+					link: "https://vanaj.io/pi2",
 				},
 				{
 					title: "Pi",
 					emoji: "🥧",
-					link: "https://vanajmoorthy.com/pi",
+					link: "https://vanaj.io/pi",
 				},
 				{
 					title: "Yoda",
 					emoji: "👽",
-					link: "https://vanajmoorthy.com/yoda",
+					link: "https://vanaj.io/yoda",
 				},
 				{
 					title: "Keylogger",
 					emoji: "🕵️",
-					link: "https://vanajmoorthy.com/gh/keylogger",
+					link: "https://vanaj.io/gh/keylogger",
 				},
 				{
 					title: "Enigma",
 					emoji: "❓",
-					link: "https://vanajmoorthy.com/enigma",
+					link: "https://vanaj.io/enigma",
 				},
 				{
 					title: "Spam Bot",
 					emoji: "🤖",
-					link: "https://vanajmoorthy.com/gh/spambot",
+					link: "https://vanaj.io/gh/spambot",
 				},
 				{
 					title: "Visualise",
 					emoji: "🎤",
-					link: "https://vanajmoorthy.com/visualise",
+					link: "https://vanaj.io/visualise",
 				},
 				{
 					title: "Graph",
 					emoji: "📈",
-					link: "https://vanajmoorthy.com/graph",
+					link: "https://vanaj.io/graph",
 				},
 				{
 					title: "Paint",
 					emoji: "🎨",
-					link: "https://vanajmoorthy.com/paint",
+					link: "https://vanaj.io/paint",
 				},
 				{
 					title: "JockyCipher",
 					emoji: "🔑",
-					link: "https://vanajmoorthy.com/jockycipher",
+					link: "https://vanaj.io/jockycipher",
 				},
 				{
 					title: "Clock",
 					emoji: "🕒",
-					link: "https://vanajmoorthy.com/clock",
+					link: "https://vanaj.io/clock",
 				},
 				{
 					title: "Snake",
 					emoji: "🍎",
-					link: "https://vanajmoorthy.com/snake",
+					link: "https://vanaj.io/snake",
 				},
 			],
 		};

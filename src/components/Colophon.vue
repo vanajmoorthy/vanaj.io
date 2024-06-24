@@ -51,7 +51,7 @@
 				>aesign.me</a
 			>. You can visit the source
 			<a
-				href="https://github.com/vanajmoorthy/vanajmoorthy.com"
+				href="https://github.com/vanajmoorthy/vanaj.io"
 				target="_blank"
 				rel="noopener noreferrer"
 				>here</a
