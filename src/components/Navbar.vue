@@ -36,8 +36,10 @@
 					<transition name="fade-slide" @before-enter="beforeEnter" @enter="enter" @leave="leave">
 						<div v-if="showDropdown" class="dropdown">
 							<button class="dark" @click="selectTheme('dark')"></button>
-							<button class="blue" @click="selectTheme('blue')"></button>
 							<button class="light" @click="selectTheme('light')"></button>
+							<button class="blue" @click="selectTheme('blue')"></button>
+							<button class="orange" @click="selectTheme('orange')"></button>
+
 						</div>
 					</transition>
 
@@ -111,7 +113,7 @@ nav {
 .theme-selector-wrapper {
 	width: 100%;
 	display: flex;
-	justify-content: end;
+	justify-content: flex-end;
 }
 
 .theme-selector-button {
@@ -138,9 +140,7 @@ ul {
 	fill: var(--primary) !important;
 }
 
-.up {
-	/* top: -1px; */
-}
+
 
 li {
 	margin-left: 2rem;
@@ -215,9 +215,9 @@ li:hover {
 	flex-direction: column;
 	display: flex;
 	align-items: center;
-	justify-content: start;
+	justify-content: flex-start;
 	margin-left: 2rem;
-	height: 170px;
+	height: 100%;
 	position: absolute;
 }
 
@@ -232,6 +232,10 @@ li:hover {
 
 .light {
 	background-color: #f8f8f8 !important;
+}
+
+.orange {
+	background-color: #FE654F !important;
 }
 
 /* Add CSS for dropdown menu */

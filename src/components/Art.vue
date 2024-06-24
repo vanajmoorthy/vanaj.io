@@ -38,6 +38,11 @@ img {
 	line-height: 1;
 }
 
+a {
+	text-decoration: underline;
+	color: var(--text);
+}
+
 div:hover {
 	opacity: 0.5;
 	transform: translateY(-10px);

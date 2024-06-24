@@ -54,19 +54,28 @@ export default {
 					github: "#3ed3a1",
 					envelope: "#e3655b",
 					square: "#228cdb",
-					hover: "#15334b"
+					hover: "#15334b",
+					"scrollbar-bg": "#2c3649",
+					/* scrollbar background */
+					"scrollbar-thumb": "#20496b",
+					/* scrollbar thumb */
+					"scrollbar-thumb-hover": "#122b3f"
 				},
 				light: {
 					background: '#f8f8f8',
 					text: '#3b3c46',
 					primary: '#8cccff',
-					border: "#6996bb",
+					border: "6996bb",
 					selector: "#fff",
 					github: "#3b4b46",
 					envelope: "#fa877e",
 					square: "#0a82db",
-					hover: "#5195cb"
-
+					hover: "#5195cb",
+					"scrollbar-bg": "#8cccff",
+					/* scrollbar background */
+					"scrollbar-thumb": "#3d8bc9",
+					/* scrollbar thumb */
+					"scrollbar-thumb-hover": "#225f8f"
 				},
 				blue: {
 					background: '#122b3f',
@@ -77,7 +86,28 @@ export default {
 					github: "#3ed3a1",
 					envelope: "#e3655b",
 					square: "#228cdb",
-					hover: "#15334b"
+					hover: "#15334b",
+					"scrollbar-bg": "#2c3649",
+					/* scrollbar background */
+					"scrollbar-thumb": "#20496b",
+					/* scrollbar thumb */
+					"scrollbar-thumb-hover": "#122b3f"
+				},
+				orange: {
+					background: "#FE654F",
+					text: '#fff2f0',
+					primary: '#fba99e',
+					border: "#fba99e",
+					selector: "#fff",
+					github: "#7745c2",
+					envelope: "#3b4b46",
+					square: "#0a82db",
+					hover: "#fba99e",
+					"scrollbar-bg": "#fba99e",
+					/* scrollbar background */
+					"scrollbar-thumb": "#e98779",
+					/* scrollbar thumb */
+					"scrollbar-thumb-hover": "#ac564a"
 				}
 			},
 			projects: null
@@ -145,11 +175,11 @@ html {
 	/* default text color */
 	--primary-color: #20496b;
 	/* default primary color */
-	--scrollbar-bg: #8cccff;
+	--scrollbar-bg: #2c3649;
 	/* scrollbar background */
-	--scrollbar-thumb: #3d8bc9;
+	--scrollbar-thumb: #20496b;
 	/* scrollbar thumb */
-	--scrollbar-thumb-hover: #225f8f;
+	--scrollbar-thumb-hover: #122b3f;
 	/* scrollbar thumb hover */
 	--selector: #fff;
 	--github: #3ed3a1;
