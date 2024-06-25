@@ -13,7 +13,7 @@
 				<p class="b-margin">
 					I'm an alumnus of the University of St. Andrews and an ex-student of The Shri Ram School. I'm an
 					avid full-stack web developer with a focus on front-end development. You can find my resume <a
-						href="https://m.vanaj.io/vkmresume" target="_blank" rel="noopener noreferrer">here</a>.
+						href="resume.pdf" target="_blank" rel="noopener noreferrer">here</a>.
 				</p>
 				<p class="b-margin">
 					I also love digital art and animation. I make 3D art in
