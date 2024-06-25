@@ -11,16 +11,15 @@
 			</div>
 			<div class="bottom-text">
 				<p class="b-margin">
-					I'm an alumnus of the University of St. Andrews and an ex-student of The Shri Ram School. I'm an
+					I'm an alumnus of the University of St. Andrews and The Shri Ram School. I'm an
 					avid full-stack web developer with a focus on front-end development. You can find my resume <a
 						href="resume.pdf" target="_blank" rel="noopener noreferrer">here</a>.
 				</p>
 				<p class="b-margin">
-					I also love digital art and animation. I make 3D art in
-					Blender, motion graphics in After Effects, and illustration
-					in Illustrator. I also play the guitar, bass, drums and
-					piano and I have an advanced + deep diving scuba diving
-					certification from PADI.
+					I'm passionate about digital art and animation, creating 3D art using Blender, motion graphics with
+					After Effects, and illustrations in Illustrator. I also enjoy music and I play the guitar, bass,
+					drums, and piano. Additionally, I hold
+					an advanced open water + deep diving scuba certification from PADI.
 				</p>
 				<p>
 					My favourite musicians include Mdou Moctar, Vulfpeck and
