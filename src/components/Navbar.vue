@@ -17,20 +17,19 @@
 			</a>
 			<div class="theme-selector-wrapper">
 				<div class="theme-selector">
-					<div class="theme-selector-button">
-						<button @click="toggleDropdown">
-							<div class="arrow">
-								<svg v-if="!showDropdown" class="svg" xmlns="http://www.w3.org/2000/svg" width="24"
-									height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
-									<path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z">
-									</path>
-								</svg>
-							</div>
-							<svg v-if="showDropdown" class="svg up" xmlns="http://www.w3.org/2000/svg" width="24"
-								height="24" viewBox="0 0 24 24"
-								style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;">
-								<path d="m12 6.879-7.061 7.06 2.122 2.122L12 11.121l4.939 4.94 2.122-2.122z"></path>
+					<div class="theme-selector-button" @click="toggleDropdown">
+						<button>
+							<svg v-if="!showDropdown" class="svg" xmlns="http://www.w3.org/2000/svg" width="24"
+								height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
+								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z">
+								</path>
 							</svg>
+
+							<svg v-if="showDropdown" class="svg up" xmlns="http://www.w3.org/2000/svg" width="24"
+								height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
+								<path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path>
+							</svg>
+
 						</button>
 					</div>
 					<transition name="fade-slide" @before-enter="beforeEnter" @enter="enter" @leave="leave">
@@ -111,26 +110,35 @@ nav {
 }
 
 .theme-selector-wrapper {
-	width: 100%;
 	display: flex;
 	justify-content: flex-end;
+	position: relative;
+	/* Ensure positioning context is set for the dropdown */
 }
 
 .theme-selector-button {
 	background-color: var(--primary);
 	border-radius: 8px;
-	height: 2.5rem;
-	width: 2.5rem;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	height: 40px;
+	width: 40px;
+	padding: 8px;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 }
 
 .theme-selector-button:hover {
 	background-color: var(--hover);
-	transition: background-color 0.2s ease;
-	cursor: pointer;
+}
+
+.theme-selector {
+	display: flex;
+	position: relative;
+	/* Positioned relative to its normal position */
 }
 
 ul {
@@ -141,14 +149,13 @@ ul {
 }
 
 .svg {
-	height: 20px;
-	position: relative;
-	left: -8px;
-	top: 0px;
-	fill: var(--primary) !important;
+	width: 24px;
+	/* Ensure SVG icons have a fixed width */
+	height: 24px;
+	/* Ensure SVG icons have a fixed height */
+	fill: var(--primary);
+	/* Use variable for color */
 }
-
-
 
 li {
 	margin-left: 2rem;
@@ -251,7 +258,7 @@ li:hover {
 
 
 .dark {
-	background-color: #1a202c !important;
+	background-color: #080a0e !important;
 }
 
 .dark:hover {
@@ -262,7 +269,7 @@ li:hover {
 }
 
 .blue {
-	background-color: #0c1d2c !important;
+	background-color: #17334d !important;
 }
 
 .blue:hover {
@@ -295,37 +302,65 @@ li:hover {
 }
 
 /* Add CSS for dropdown menu */
-.theme-selector .dropdown {
+.dropdown {
 	position: absolute;
-	/* Change from relative to absolute */
 	top: 100%;
-	/* Position it below the theme selector button */
+	/* Positioned right below the button */
 	right: 0;
-	/* Align it to the right of the theme selector */
 	background-color: var(--primary);
 	border-radius: 0 0 8px 8px;
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-	z-index: 1;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
-	padding: 0.5rem 0.7rem;
-	margin-top: -0.39rem;
-	max-width: 40px;
+	align-items: center;
+	padding: 10px 5px 5px 5px;
+	/* Added padding */
+	width: 40px;
+	/* Ensure it takes as much space as needed */
 	z-index: 0;
-	/* Add some space between the button and dropdown */
+	top: 32px;
+	/* Ensure it's above other content */
+	transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .theme-selector button {
-	border: none;
 	background: none;
-	color: inherit;
-	cursor: pointer;
+	border: none;
+	width: 100%;
+	/* Take full width to prevent squishing */
+	margin: 4px 0;
+	/* Adjust margin */
+	/* Increase padding for better tap area */
+	border-radius: 4px;
+	/* Rounded corners for buttons */
+	transition: background-color 0.2s ease;
 	background-color: var(--background);
-	width: 20px;
+	border-radius: 50%;
+	/* Makes the button round */
 	height: 20px;
-	border-radius: 30px;
-	margin: 0.61rem 0.2rem;
+	/* Height of the button */
+	width: 20px;
+	/* Width of the button, same as height for a circle */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* Center content vertically and horizontally */
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+	padding: 0;
+
+}
+
+.theme-selector-button:hover {
+	/* transform: scale(1.05); */
+	/* Slight increase on hover */
+	cursor: pointer;
+	background-color: var(--hover);
+}
+
+.theme-selector button:hover {
+	cursor: pointer;
+
 }
 
 .fade-slide-enter-active,
@@ -345,6 +380,7 @@ li:hover {
 	width: 20px;
 	margin: 0.5rem 0;
 	height: 20px;
+	border-radius: 20px;
 }
 
 @media screen and (max-width: 530px) {
@@ -387,6 +423,19 @@ li:hover {
 
 	.theme-selector {
 		margin-left: 1rem !important;
+	}
+}
+
+
+@media screen and (max-width: 1250px) {
+	.theme-selector-wrapper {
+		width: 100%;
+		/* Full width on smaller screens */
+	}
+
+	.theme-selector-button {
+		/* padding: 10px; */
+		/* Larger tap area on mobile */
 	}
 }
 </style>

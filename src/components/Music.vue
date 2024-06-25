@@ -142,7 +142,7 @@ li {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	background-color: var(--border);
+	background-color: var(--primary);
 	padding: 0.5rem 0.5rem;
 	/* margin-bottom: 0.5rem;200px */
 	border-radius: 8px;

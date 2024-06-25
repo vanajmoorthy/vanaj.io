@@ -56,12 +56,11 @@ export default {
 			currentTheme: 'dark',
 			themes: {
 				dark: {
-					background: '#1a202c',
+					background: '#080a0e',
 					text: '#fff',
 					texttwo: '#fff',
-
-					primary: '#1b405e',
-					border: "#204665",
+					primary: '#323b4e',
+					border: "#507b9e",
 					selector: "#7eaacd",
 					github: "#3ed3a1",
 					envelope: "#e3655b",
