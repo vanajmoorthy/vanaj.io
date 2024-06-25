@@ -5,6 +5,9 @@
 			<HorizontalDivider></HorizontalDivider>
 			<Hero></Hero>
 			<HorizontalDivider></HorizontalDivider>
+
+			<Projects :projectsBig="projectsBig"></Projects>
+			<HorizontalDivider></HorizontalDivider>
 			<h1 class="art">Art</h1>
 
 			<div class="art-container">
@@ -27,8 +30,14 @@ import HorizontalDivider from "./components/HorizontalDivider.vue";
 import Hero from "./components/Hero.vue";
 import Art from "./components/Art.vue";
 import Code from "./components/Code.vue";
+import Projects from "./components/Projects.vue";
 import ColophonMusic from "./components/ColophonMusic.vue";
 import Footer from "./components/Footer.vue";
+import polyTabImage from '@/assets/polytab.png';
+import puzzleflixImage from '@/assets/puzzleflix.png';
+import mcowImage from '@/assets/mcow.png';
+
+
 
 export default {
 	name: "App",
@@ -36,6 +45,7 @@ export default {
 		Navbar,
 		HorizontalDivider,
 		Hero,
+		Projects,
 		Art,
 		Code,
 		ColophonMusic,
@@ -48,6 +58,8 @@ export default {
 				dark: {
 					background: '#1a202c',
 					text: '#fff',
+					texttwo: '#fff',
+
 					primary: '#1b405e',
 					border: "#204665",
 					selector: "#7eaacd",
@@ -64,12 +76,14 @@ export default {
 				light: {
 					background: '#f8f8f8',
 					text: '#3b3c46',
-					primary: '#8cccff',
-					border: "6996bb",
+					texttwo: '#fff',
+
+					primary: '#78b5e6',
+					border: "#78b5e6",
 					selector: "#fff",
-					github: "#3b4b46",
+					github: "#c4ffec",
 					envelope: "#fa877e",
-					square: "#0a82db",
+					square: "#004579",
 					hover: "#5195cb",
 					"scrollbar-bg": "#8cccff",
 					/* scrollbar background */
@@ -80,6 +94,8 @@ export default {
 				blue: {
 					background: '#122b3f',
 					text: '#fff',
+					texttwo: '#fff',
+
 					primary: '#20496b',
 					border: "#204665",
 					selector: "#fff",
@@ -96,6 +112,8 @@ export default {
 				orange: {
 					background: "#FE654F",
 					text: '#fff2f0',
+					texttwo: '#fff2f0',
+
 					primary: '#fba99e',
 					border: "#fba99e",
 					selector: "#fff",
@@ -110,7 +128,40 @@ export default {
 					"scrollbar-thumb-hover": "#ac564a"
 				}
 			},
-			projects: null
+			projects: null,
+			projectsBig: [
+				{
+					title: "PolyTab",
+					image: polyTabImage,
+					description: ["A machine-learning model to automatically transcribe audio recordings of solo acoustic guitars to readable guitar tablature built using TensorFlow. This model builds on academic work in the nascent field of using machine learning for Music Information Retrieval (MIR) and utilises a convolutional neural network to learn features from spectograms of guitar audio recordings to automatically produce usable guitar tablature."],
+					demoLink: "https://github.com/vanajmoorthy/CS4099-PolyTab/blob/main/Automatic%20Polyphonic%20Guitar%20Transcription.pdf",
+					sourceLink: "https://github.com/vanajmoorthy/CS4099-PolyTab",
+				},
+				{
+					title: "PuzzleFlix",
+					image: puzzleflixImage,
+					description: [
+						"A puzzle playing website where you can play sudoku, multiple eights puzzles, and the eight queens puzzle.",
+
+						"This was my sub-honours year long software engineering final project completed for my 3rd year at the University of St Andrews. Developed by a team of 5 in a simulated software engineer environment using Agile and SCRUM management techniques.",
+
+						"Awarded a grade of a first."
+					],
+					demoLink: "https://puzzleflix.vanaj.io",
+					sourceLink: "https://github.com/vanajmoorthy/puzzleflix",
+				},
+				{
+					title: "mcow.ml",
+					image: mcowImage,
+					description: [
+						"A self-hostable URL shortener built using ExpressJS and MongoDB, complete with authentication, custom short links and the ability to save shortened links to your profile.",
+
+						"While the site was active it retained ~1000 monthly active users."
+					],
+					demoLink: "https://m.vanaj.io",
+					sourceLink: "https://github.com/vanajmoorthy/mcow.ml",
+				}
+			]
 		};
 	},
 	methods: {
@@ -172,6 +223,8 @@ html {
 	--border: #204665;
 	/* default dark theme background */
 	--text: #fff;
+	--texttwo: #fff;
+
 	/* default text color */
 	--primary-color: #20496b;
 	/* default primary color */
@@ -197,8 +250,6 @@ body {
 }
 
 
-
-
 ::-webkit-scrollbar {
 	width: 5px;
 }
@@ -216,7 +267,7 @@ body {
 }
 
 .home {
-	max-width: 870px;
+	max-width: 1000px;
 	margin: 2rem auto;
 }
 
@@ -246,7 +297,34 @@ body {
 
 @media screen and (max-width: 1380px) {
 	.home {
-		margin: 2rem 12rem;
+		margin: 2rem 16rem;
+	}
+}
+
+
+@media screen and (max-width: 1305px) {
+	.home {
+		margin: 2rem 14rem;
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
+	.home {
+		margin: 2rem 10rem;
+	}
+}
+
+@media screen and (max-width: 1130px) {
+	.home {
+		margin: 2rem 10rem;
+	}
+}
+
+
+@media screen and (max-width: 1050px) {
+	.home {
+		margin: 2rem 8rem;
 	}
 }
 

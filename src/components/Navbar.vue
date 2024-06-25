@@ -123,6 +123,14 @@ nav {
 	width: 2.5rem;
 	display: flex;
 	justify-content: center;
+	position: relative;
+	z-index: 2;
+}
+
+.theme-selector-button:hover {
+	background-color: var(--hover);
+	transition: background-color 0.2s ease;
+	cursor: pointer;
 }
 
 ul {
@@ -156,7 +164,7 @@ li {
 }
 
 li:hover {
-	background-color: #15334b;
+	background-color: var(--hover);
 	transform: translateY(-5px);
 	transition: all ease 0.2s;
 }
@@ -179,6 +187,29 @@ li:hover {
 
 .fa-behance-square {
 	color: var(--square);
+}
+
+@media screen and (min-width: 1250px) {
+	.theme-selector-wrapper {
+		display: block;
+	}
+
+	theme-selector-wrapper {
+		position: relative;
+		/* Add this */
+	}
+
+	.theme-selector {
+		position: static;
+		/* Change from relative to static */
+	}
+
+	.theme-selector .dropdown {
+		right: 0;
+		/* Align to the right edge of the wrapper */
+		left: auto;
+		/* Reset any left positioning */
+	}
 }
 
 @media screen and (max-width: 1250px) {
@@ -206,19 +237,16 @@ li:hover {
 
 .theme-selector {
 	border-radius: 8px;
-	justify-content: center;
-	align-items: center;
-	/* background-color: var(--primary); */
 	transition: all ease 0.2s;
 	height: 2.5rem;
 	width: 2.5rem;
-	flex-direction: column;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
 	margin-left: 2rem;
-	height: 100%;
-	position: absolute;
+	position: relative;
+	/* Change from absolute to relative */
 }
 
 
@@ -226,31 +254,66 @@ li:hover {
 	background-color: #1a202c !important;
 }
 
+.dark:hover {
+	background-color: #07080b !important;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
 .blue {
-	background-color: #122b3f !important;
+	background-color: #0c1d2c !important;
+}
+
+.blue:hover {
+	background-color: #000000 !important;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	transform: scale(1.2);
 }
 
 .light {
 	background-color: #f8f8f8 !important;
 }
 
+.light:hover {
+	background-color: #beb3b3 !important;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
 .orange {
 	background-color: #FE654F !important;
 }
 
+.orange:hover {
+	background-color: #c54835 !important;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
 /* Add CSS for dropdown menu */
 .theme-selector .dropdown {
-	position: relative;
-	/* bottom: 50px; */
+	position: absolute;
+	/* Change from relative to absolute */
+	top: 100%;
+	/* Position it below the theme selector button */
+	right: 0;
+	/* Align it to the right of the theme selector */
 	background-color: var(--primary);
-	border-radius: 8px;
+	border-radius: 0 0 8px 8px;
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	/* Keeps children from overflowing during transition */
 	padding: 0.5rem 0.7rem;
+	margin-top: -0.39rem;
+	max-width: 40px;
+	z-index: 0;
+	/* Add some space between the button and dropdown */
 }
 
 .theme-selector button {

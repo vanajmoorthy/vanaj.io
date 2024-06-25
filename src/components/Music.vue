@@ -148,6 +148,10 @@ li {
 	border-radius: 8px;
 }
 
+.numbers {
+	display: flex;
+}
+
 .numbers>img {
 	width: 42px;
 	border-radius: 8px;

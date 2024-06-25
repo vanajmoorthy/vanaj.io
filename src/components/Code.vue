@@ -9,7 +9,7 @@
 			</div>
 		</div>
 
-		<div class="cards">
+		<div class="cards" ref="cardsContainer">
 			<Card v-for="card in cards" :key="card.title" :title="card.title" :emoji="card.emoji" :link="card.link">
 			</Card>
 		</div>
@@ -25,9 +25,34 @@ export default {
 		return {
 			cards: [
 				{
-					title: "mcow.ml",
-					emoji: "🐮",
-					link: "https://www.mcow.ml",
+					title: "Dogs",
+					emoji: "🐶",
+					link: "https://vanaj.io/dogs",
+				},
+				{
+					title: "Morph",
+					emoji: "💠",
+					link: "https://vanaj.io/morph",
+				},
+				{
+					title: "Speechy",
+					emoji: "🐢",
+					link: "https://vanaj.io/gh/speechylang",
+				},
+				{
+					title: "Obstacles",
+					emoji: "▶️",
+					link: "https://vanaj.io/obstacles",
+				},
+				{
+					title: "Enigma",
+					emoji: "❓",
+					link: "https://vanaj.io/enigma",
+				},
+				{
+					title: "Visualise",
+					emoji: "🎤",
+					link: "https://vanaj.io/visualise",
 				},
 				{
 					title: "Create",
@@ -49,35 +74,11 @@ export default {
 					emoji: "🌎",
 					link: "https://vanaj.io/gravity",
 				},
-				{
-					title: "Blog",
-					emoji: "✒️",
-					link: "https://vanaj.io/gh/blog-api",
-				},
-				{
-					title: "Dogs",
-					emoji: "🐶",
-					link: "https://vanaj.io/dogs",
-				},
-				{
-					title: "Morph",
-					emoji: "💠",
-					link: "https://vanaj.io/morph",
-				},
+
 				{
 					title: "cshell",
 					emoji: "🐚",
 					link: "https://vanaj.io/gh/cshell",
-				},
-				{
-					title: "Speechy",
-					emoji: "🐢",
-					link: "https://vanaj.io/gh/speechylang",
-				},
-				{
-					title: "Obstacles",
-					emoji: "▶️",
-					link: "https://vanaj.io/obstacles",
 				},
 				{
 					title: "Tic Tac Toe",
@@ -110,21 +111,13 @@ export default {
 					emoji: "🕵️",
 					link: "https://vanaj.io/gh/keylogger",
 				},
-				{
-					title: "Enigma",
-					emoji: "❓",
-					link: "https://vanaj.io/enigma",
-				},
+
 				{
 					title: "Spam Bot",
 					emoji: "🤖",
 					link: "https://vanaj.io/gh/spambot",
 				},
-				{
-					title: "Visualise",
-					emoji: "🎤",
-					link: "https://vanaj.io/visualise",
-				},
+
 				{
 					title: "Graph",
 					emoji: "📈",
@@ -188,7 +181,6 @@ export default {
 	margin: 0 auto;
 	display: grid;
 	max-height: 320px;
-	/* This will now be set by JS, initial value may not be needed unless for initial load */
 	overflow: hidden;
 	transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
@@ -203,13 +195,9 @@ export default {
 
 @media screen and (max-width: 1015px) {
 	.cards {
-		/* Remove or adjust this if JavaScript is handling the changes */
 		max-height: 275px;
-		/* Initial max-height for smaller screens, handled by JS */
 	}
 }
-
-
 
 @media (min-width: 600px) {
 	.cards {
