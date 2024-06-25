@@ -36,7 +36,7 @@ import Footer from "./components/Footer.vue";
 import polyTabImage from '@/assets/polytab.png';
 import puzzleflixImage from '@/assets/puzzleflix.png';
 import mcowImage from '@/assets/mcow.png';
-
+import aeloImage from '@/assets/aelo.png';
 
 
 export default {
@@ -94,10 +94,9 @@ export default {
 					background: '#122b3f',
 					text: '#fff',
 					texttwo: '#fff',
-
 					primary: '#20496b',
 					border: "#204665",
-					selector: "#fff",
+					selector: "#5286b0",
 					github: "#3ed3a1",
 					envelope: "#e3655b",
 					square: "#228cdb",
@@ -113,9 +112,9 @@ export default {
 					text: '#fff2f0',
 					texttwo: '#fff2f0',
 
-					primary: '#fba99e',
+					primary: '#f0905b',
 					border: "#fba99e",
-					selector: "#fff",
+					selector: "#FE654F",
 					github: "#7745c2",
 					envelope: "#3b4b46",
 					square: "#0a82db",
@@ -132,13 +131,23 @@ export default {
 				{
 					title: "PolyTab",
 					image: polyTabImage,
+					tag: "Machine Learning",
 					description: ["A machine-learning model to automatically transcribe audio recordings of solo acoustic guitars to readable guitar tablature built using TensorFlow. This model builds on academic work in the nascent field of using machine learning for Music Information Retrieval (MIR) and utilises a convolutional neural network to learn features from spectograms of guitar audio recordings to automatically produce usable guitar tablature."],
 					demoLink: "https://github.com/vanajmoorthy/CS4099-PolyTab/blob/main/Automatic%20Polyphonic%20Guitar%20Transcription.pdf",
 					sourceLink: "https://github.com/vanajmoorthy/CS4099-PolyTab",
 				},
 				{
+					title: "Aelo",
+					image: aeloImage,
+					tag: "UI/UX",
+					description: ["Winning second place at AngelHack Delhi 2019, Aelo is a travel assistant app for which I designed the user interface.", "Designed in Sketch and written for iOS using UIKit, Aelo included mmany features to make planning travel easier, such as a flight-delay prediction machine learning model."],
+					demoLink: "https://www.behance.net/gallery/80367169/Aelo-UI-Demo-and-Pitch-Video",
+					sourceLink: "",
+				},
+				{
 					title: "PuzzleFlix",
 					image: puzzleflixImage,
+					tag: "Full Stack",
 					description: [
 						"A puzzle playing website where you can play sudoku, multiple eights puzzles, and the eight queens puzzle.",
 
@@ -152,6 +161,7 @@ export default {
 				{
 					title: "mcow.ml",
 					image: mcowImage,
+					tag: "Full Stack",
 					description: [
 						"A self-hostable URL shortener built using ExpressJS and MongoDB, complete with authentication, custom short links and the ability to save shortened links to your profile.",
 

@@ -12,10 +12,11 @@
 			<div class="bottom-text">
 				<p class="b-margin">
 					I'm an alumnus of the University of St. Andrews and an ex-student of The Shri Ram School. I'm an
-					avid full-stack web developer with a focus on front-end development.
+					avid full-stack web developer with a focus on front-end development. You can find my resume <a
+						href="https://m.vanaj.io/vkmresume" target="_blank" rel="noopener noreferrer">here</a>.
 				</p>
 				<p class="b-margin">
-					I also love digital art and animation. I do 3D art in
+					I also love digital art and animation. I make 3D art in
 					Blender, motion graphics in After Effects, and illustration
 					in Illustrator. I also play the guitar, bass, drums and
 					piano and I have an advanced + deep diving scuba diving
@@ -62,6 +63,10 @@ img {
 
 .hero {
 	display: flex;
+}
+
+a {
+	color: var(--text);
 }
 
 .text {

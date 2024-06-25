@@ -4,7 +4,7 @@
             <h1>Projects</h1>
         </div>
         <div class="projects-cards">
-            <ProjectCard v-for="project in projectsBig" :key="project.title" :title="project.title"
+            <ProjectCard v-for="project in projectsBig" :key="project.title" :title="project.title" :tag="project.tag"
                 :image="project.image" :description="project.description" :demoLink="project.demoLink"
                 :sourceLink="project.sourceLink">
             </ProjectCard>
