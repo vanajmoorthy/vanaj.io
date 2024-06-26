@@ -59,7 +59,7 @@ export default {
                 const children = Array.from(div.children);
                 if (children.length > 1) {
                     const totalHeight = children.slice(0, 2).reduce((sum, child) => {
-                        return sum + child.offsetHeight + parseInt(window.getComputedStyle(child).marginBottom, 12);
+                        return sum + child.offsetHeight + parseInt(window.getComputedStyle(child).marginBottom, 11);
                     }, 0);
                     this.initialMaxHeight = `${totalHeight}px`;
                     div.style.maxHeight = this.initialMaxHeight;
