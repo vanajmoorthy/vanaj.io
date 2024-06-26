@@ -2,13 +2,21 @@
     <div class="projects-container">
         <div class="row">
             <h1>Projects</h1>
+            <div>
+                <button v-on:click="expandDiv">
+                    <i id="projects-chevron" class="fas fa-chevron-down fa-lg"></i>
+                </button>
+            </div>
         </div>
-        <div class="projects-cards">
+        <div class="projects-cards" ref="projectsContainer">
             <ProjectCard v-for="project in projectsBig" :key="project.title" :title="project.title" :tag="project.tag"
                 :image="project.image" :description="project.description" :demoLink="project.demoLink"
                 :sourceLink="project.sourceLink">
             </ProjectCard>
+
         </div>
+        <p class="expand">...</p>
+
     </div>
 </template>
 
@@ -20,11 +28,67 @@ export default {
     components: { ProjectCard },
     props: {
         projectsBig: Array
-    }
+    },
+    data() {
+        return {
+            isExpanded: false,
+            initialMaxHeight: '0px'
+        };
+    },
+    mounted() {
+        this.calculateInitialMaxHeight();
+    },
+    methods: {
+        expandDiv() {
+            const div = this.$refs.projectsContainer;
+            const chevron = document.getElementById("projects-chevron");
+
+            if (!this.isExpanded) {
+                div.style.maxHeight = '4000px'; // A very large max-height to accommodate all items
+                chevron.style.transform = "rotate(180deg)";
+                this.isExpanded = true;
+            } else {
+                div.style.maxHeight = this.initialMaxHeight; // Collapse back to the initial calculated max-height
+                chevron.style.transform = "rotate(0deg)";
+                this.isExpanded = false;
+            }
+        },
+        calculateInitialMaxHeight() {
+            this.$nextTick(() => {
+                const div = this.$refs.projectsContainer;
+                const children = Array.from(div.children);
+                if (children.length > 1) {
+                    const totalHeight = children.slice(0, 2).reduce((sum, child) => {
+                        return sum + child.offsetHeight + parseInt(window.getComputedStyle(child).marginBottom, 12);
+                    }, 0);
+                    this.initialMaxHeight = `${totalHeight}px`;
+                    div.style.maxHeight = this.initialMaxHeight;
+                }
+            });
+        }
+    },
 };
 </script>
 
 <style scoped>
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expand {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+#projects-chevron {
+    color: var(--background);
+}
+
 .row h1 {
     font-size: 1.8rem;
     color: var(--text);
@@ -35,19 +99,37 @@ export default {
     margin-block-start: 0;
 }
 
-.cards.projects-cards {
+.row button {
+    background-color: var(--primary);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.row button:hover {
+    background-color: var(--hover);
+}
+
+.row button:focus {
+    outline: none;
+}
+
+.projects-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    /* Two columns for wider screens */
     gap: 20px;
     margin: 20px auto;
-    transition: all 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 740px;
 }
 
 @media (max-width: 768px) {
-    .cards.projects-cards {
+    .projects-cards {
         grid-template-columns: 1fr;
-        /* One column for smaller screens */
+        max-height: 340px;
     }
 }
 
@@ -110,4 +192,6 @@ export default {
         padding: 0rem;
     }
 }
+
+/* Rest of your existing styles... */
 </style>

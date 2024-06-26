@@ -38,6 +38,7 @@ export default {
 .card:hover svg {
 	transform: translateY(-5px);
 }
+
 .card:hover h1 {
 	transform: translateY(-5px);
 }

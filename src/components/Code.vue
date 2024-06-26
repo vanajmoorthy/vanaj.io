@@ -13,6 +13,7 @@
 			<Card v-for="card in cards" :key="card.title" :title="card.title" :emoji="card.emoji" :link="card.link">
 			</Card>
 		</div>
+		<p class="expand">...</p>
 	</div>
 </template>
 
@@ -185,6 +186,12 @@ export default {
 	transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
 
+.expand {
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--primary);
+}
 
 .expandedCards {
 	max-height: 1400px;
@@ -230,9 +237,13 @@ h1 {
 
 
 svg {
-	color: white;
+	color: var(--background);
+
 }
 
+#chevron {
+	color: var(--background);
+}
 
 .row button {
 	background-color: var(--primary);

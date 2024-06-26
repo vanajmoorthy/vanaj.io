@@ -17,19 +17,9 @@
 			</a>
 			<div class="theme-selector-wrapper">
 				<div class="theme-selector">
-					<div class="theme-selector-button" @click="toggleDropdown">
+					<div class="theme-selector-button" v-on:click="toggleDropdown">
 						<button>
-							<svg v-if="!showDropdown" class="svg" xmlns="http://www.w3.org/2000/svg" width="24"
-								height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
-								<path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z">
-								</path>
-							</svg>
-
-							<svg v-if="showDropdown" class="svg up" xmlns="http://www.w3.org/2000/svg" width="24"
-								height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;">
-								<path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path>
-							</svg>
-
+							<i id="chevron" class="fas fa-chevron-down fa-lg"></i>
 						</button>
 					</div>
 					<transition name="fade-slide" @before-enter="beforeEnter" @enter="enter" @leave="leave">
@@ -38,10 +28,8 @@
 							<button class="light" @click="selectTheme('light')"></button>
 							<button class="blue" @click="selectTheme('blue')"></button>
 							<button class="orange" @click="selectTheme('orange')"></button>
-
 						</div>
 					</transition>
-
 				</div>
 			</div>
 		</ul>
@@ -57,12 +45,44 @@ export default {
 			showDropdown: false
 		};
 	},
+	computed: {
+		chevronClass() {
+			console.log(this.showDropdown);
+			return this.showDropdown ? 'fa-chevron-up' : 'fa-chevron-down';
+		}
+	},
 	methods: {
 		toggleDropdown() {
-			this.showDropdown = !this.showDropdown;
+
+			const chevron = document.getElementById("chevron");
+
+			if (!this.showDropdown) {
+				chevron.style.transform = "rotate(180deg)";
+				chevron.style.position = "relative";
+				chevron.style.top = "0px";
+				chevron.style.width = "12px !important";
+
+				this.showDropdown = true;
+			} else {
+				chevron.style.transform = "rotate(0deg)";
+				chevron.style.position = "relative";
+				chevron.style.top = "1px";
+				chevron.style.width = "12px !important";
+				this.showDropdown = false;
+			}
+
+		},
+		getChevronClass() {
+			return this.showDropdown ? 'fa-chevron-up' : 'fa-chevron-down';
 		},
 		selectTheme(theme) {
 			this.$emit('themeChanged', theme);
+
+			const chevron = document.getElementById("chevron");
+			chevron.style.transform = "rotate(0deg)";
+			chevron.style.position = "relative";
+			chevron.style.top = "1px";
+			chevron.style.width = "12px";
 			this.showDropdown = false;
 		},
 		beforeEnter(el) {
@@ -109,6 +129,11 @@ nav {
 	color: var(--text);
 }
 
+.fa-chevron-up {
+	transform: rotate(180deg);
+	/* Ensures the icon flips when it's in the 'up' state */
+}
+
 .theme-selector-wrapper {
 	display: flex;
 	justify-content: flex-end;
@@ -129,7 +154,23 @@ nav {
 	padding: 8px;
 	position: relative;
 	z-index: 1;
+
 }
+
+
+button svg {
+	color: var(--primary);
+	position: relative;
+	/* top: 1px; */
+	width: 13px !important;
+}
+
+/* Optional: Add rotation for visual feedback */
+.theme-selector-button i.fa-chevron-up {
+	transform: rotate(180deg);
+}
+
+
 
 .theme-selector-button:hover {
 	background-color: var(--hover);
@@ -139,6 +180,11 @@ nav {
 	display: flex;
 	position: relative;
 	/* Positioned relative to its normal position */
+}
+
+.theme-selector:hover {
+	cursor: pointer;
+
 }
 
 ul {
