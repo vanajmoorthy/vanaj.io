@@ -24,9 +24,9 @@
 					</div>
 					<transition name="fade-slide" @before-enter="beforeEnter" @enter="enter" @leave="leave">
 						<div v-if="showDropdown" class="dropdown">
-							<button class="dark" @click="selectTheme('dark')"></button>
-							<button class="light" @click="selectTheme('light')"></button>
 							<button class="blue" @click="selectTheme('blue')"></button>
+							<button class="light" @click="selectTheme('light')"></button>
+							<button class="dark" @click="selectTheme('dark')"></button>
 							<button class="orange" @click="selectTheme('orange')"></button>
 						</div>
 					</transition>
@@ -315,7 +315,7 @@ li:hover {
 }
 
 .blue {
-	background-color: #17334d !important;
+	background-color: #3a70a2 !important;
 }
 
 .blue:hover {

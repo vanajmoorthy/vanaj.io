@@ -53,7 +53,7 @@ export default {
 	},
 	data() {
 		return {
-			currentTheme: 'dark',
+			currentTheme: 'blue',
 			themes: {
 				dark: {
 					background: '#0a1120',
