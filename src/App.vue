@@ -185,7 +185,7 @@ export default {
 	},
 
 	mounted() {
-		const savedTheme = localStorage.getItem('currentTheme') || 'dark';  // Default to 'dark' if no theme stored
+		const savedTheme = localStorage.getItem('currentTheme') || 'blue';  // Default to 'dark' if no theme stored
 		this.changeTheme(savedTheme);
 
 		const url = "https://www.behance.net/v2/users/vanajmoorthy/projects?client_id=ZLBxK9rEfHwJf9K0rmseNr2fS2gS2HJW";
