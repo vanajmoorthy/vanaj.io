@@ -319,7 +319,7 @@ li:hover {
 }
 
 .blue:hover {
-	background-color: #000000 !important;
+	background-color: #193652 !important;
 	transition: all 0.2s ease;
 	cursor: pointer;
 	transform: scale(1.2);
