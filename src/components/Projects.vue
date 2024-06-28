@@ -4,7 +4,9 @@
             <h1>Projects</h1>
             <div>
                 <button v-on:click="expandDiv">
-                    <i id="projects-chevron" class="fas fa-chevron-down fa-lg"></i>
+                    <div>
+                        <i id="projects-chevron" class="fas fa-chevron-down fa-lg"></i>
+                    </div>
                 </button>
             </div>
         </div>
@@ -58,8 +60,8 @@ export default {
                 const div = this.$refs.projectsContainer;
                 const children = Array.from(div.children);
                 if (children.length > 1) {
-                    const totalHeight = children.slice(0, 2).reduce((sum, child) => {
-                        return sum + child.offsetHeight + parseInt(window.getComputedStyle(child).marginBottom, 11);
+                    const totalHeight = children.slice(0, 1).reduce((sum, child) => {
+                        return (sum + child.offsetHeight + parseInt(window.getComputedStyle(child).marginBottom, 11) - 20);
                     }, 0);
                     this.initialMaxHeight = `${totalHeight}px`;
                     div.style.maxHeight = this.initialMaxHeight;
@@ -97,6 +99,10 @@ export default {
     line-height: 0.4;
     width: 103px;
     margin-block-start: 0;
+}
+
+button div {
+    width: 20px;
 }
 
 .row button {

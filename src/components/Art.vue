@@ -54,4 +54,22 @@ div:hover {
 		height: 240px;
 	}
 }
+
+@media screen and (max-width: 410px) {
+	img {
+		height: 220px;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	img {
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 345px) {
+	img {
+		height: 180px;
+	}
+}
 </style>
