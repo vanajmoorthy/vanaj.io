@@ -76,7 +76,8 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    height: 30px;
 }
 
 .expand {
@@ -108,6 +109,7 @@ export default {
     line-height: 0.4;
     width: 103px;
     margin-block-start: 0;
+    margin-bottom: 0rem;
 }
 
 button div {
