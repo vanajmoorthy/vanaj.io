@@ -4,7 +4,12 @@
 			<h1>Code</h1>
 			<div>
 				<button v-on:click="expandDiv">
-					<i id="chevron" class="fas fa-chevron-down fa-lg"></i>
+					<svg id="chevron" :class="{ 'rotated': isExpanded, }" xmlns="http://www.w3.org/2000/svg" height="20"
+						width="20" viewBox="0 0 512 512">
+						<path
+							d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+					</svg>
+
 				</button>
 			</div>
 		</div>
@@ -13,7 +18,8 @@
 			<Card v-for="card in cards" :key="card.title" :title="card.title" :emoji="card.emoji" :link="card.link">
 			</Card>
 		</div>
-		<p class="expand">...</p>
+		<p v-if="!isExpanded" v-on:click="expandDiv" class="expand">Show More</p>
+		<p v-if="isExpanded" v-on:click="expandDiv" class="expand">Show Less</p>
 	</div>
 </template>
 
@@ -145,32 +151,38 @@ export default {
 					link: "https://vanaj.io/snake",
 				},
 			],
-			isExpanded: false
+			isExpanded: false,
+			initialMaxHeight: '0px'
 		};
+	},
+	mounted() {
+		this.calculateInitialMaxHeight();
 	},
 	methods: {
 		expandDiv() {
-			const div = document.querySelector(".cards");
-			const chevron = document.getElementById("chevron");
-			const fullHeight = Array.from(div.children).reduce((total, child) => total + child.offsetHeight + parseInt(window.getComputedStyle(child).marginBottom, 10), 0);
-
-			// Get current viewport width
-			const viewportWidth = window.innerWidth;
-
-			// Set max height based on viewport width
-			const maxHeight = viewportWidth < 1015 ? '275px' : '320px';
-			const expandedMaxHeight = viewportWidth < 1015 ? '4000px' : '1400px';
-
+			const div = this.$refs.cardsContainer;
 			if (!this.isExpanded) {
-				div.style.maxHeight = fullHeight < parseInt(expandedMaxHeight) ? expandedMaxHeight : fullHeight + 'px'; // Use the smaller of calculated fullHeight or expandedMaxHeight
-				chevron.style.transform = "rotate(180deg)";
+				div.style.maxHeight = '4000px';
 				this.isExpanded = true;
 			} else {
-				div.style.maxHeight = maxHeight; // Use different max heights based on the screen width
-				chevron.style.transform = "rotate(0deg)";
+				div.style.maxHeight = this.initialMaxHeight;
 				this.isExpanded = false;
 			}
 		},
+		calculateInitialMaxHeight() {
+			this.$nextTick(() => {
+				const div = this.$refs.cardsContainer;
+				const children = Array.from(div.children);
+				if (children.length > 1) {
+					const totalHeight = children.slice(0, 3).reduce((sum, child) => {
+						return (sum + child.offsetHeight + parseInt(window.getComputedStyle(child).marginBottom, 11) + 15);
+					}, 0);
+					this.initialMaxHeight = `${totalHeight}px`;
+					div.style.maxHeight = this.initialMaxHeight;
+				}
+			});
+
+		}
 	},
 
 };
@@ -184,13 +196,39 @@ export default {
 	max-height: 320px;
 	overflow: hidden;
 	transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+	margin-bottom: 1.5rem;
+}
+
+
+#chevron {
+	fill: var(--background) !important;
+	font-size: 1.33333em;
+	line-height: 0.75em;
+	transition: transform 0.3s ease;
+	width: 17px;
+	height: 17px;
+
+}
+
+#chevron.rotated {
+	transform: rotate(180deg);
 }
 
 .expand {
-	text-align: center;
-	font-weight: 700;
-	font-size: 1.2rem;
-	color: var(--primary);
+	color: var(--background);
+	font-weight: 500;
+	background-color: var(--primary);
+	border-radius: 8px;
+	padding: 0.4rem 0.6rem;
+	margin: auto;
+	margin-top: 0.5rem;
+	width: max-content;
+}
+
+.expand:hover {
+	filter: brightness(0.9);
+	cursor: pointer;
+	transition: 0.2s ease all;
 }
 
 .expandedCards {
@@ -252,7 +290,9 @@ svg {
 	border-radius: 8px;
 	cursor: pointer;
 	transition: background-color 0.2s ease;
-	/* Smooth background color transition */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .row button:hover {

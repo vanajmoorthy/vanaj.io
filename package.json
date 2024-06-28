@@ -9,7 +9,7 @@
     "start": "npm run serve"
   },
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "aos": "^3.0.0-beta.6",
     "encoding": "^0.1.13",
     "eslint": "^7.7.0",
@@ -23,7 +23,7 @@
     "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "@vue/cli-plugin-eslint": "^4.5.4",
     "@vue/cli-plugin-pwa": "^4.4.6",
     "@vue/cli-plugin-router": "^4.5.2",

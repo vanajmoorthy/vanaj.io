@@ -12,7 +12,7 @@
 			</a>
 			<a href="https://www.behance.net/vanajmoorthy" target="_blank" rel="noopener noreferrer">
 				<li class="last">
-					<i class="fab fa-behance-square fa-lg"></i>
+					<i class="fab fa-square-behance fa-lg"></i>
 				</li>
 			</a>
 			<div class="theme-selector-wrapper">
@@ -238,8 +238,8 @@ li:hover {
 	color: var(--envelope);
 }
 
-.fa-behance-square {
-	color: var(--square);
+.fa-square-behance {
+	color: var(--square) !important;
 }
 
 @media screen and (min-width: 1250px) {

@@ -4,9 +4,7 @@
             <h1>Projects</h1>
             <div>
                 <button v-on:click="expandDiv">
-                    <div>
-                        <i id="projects-chevron" class="fas fa-chevron-down fa-lg"></i>
-                    </div>
+                    <i id="projects-chevron" class="fas fa-chevron-down fa-lg"></i>
                 </button>
             </div>
         </div>
@@ -17,7 +15,8 @@
             </ProjectCard>
 
         </div>
-        <p class="expand">...</p>
+        <p v-if="!isExpanded" v-on:click="expandDiv" class="expand">Show More</p>
+        <p v-if="isExpanded" v-on:click="expandDiv" class="expand">Show Less</p>
 
     </div>
 </template>
@@ -81,10 +80,20 @@ export default {
 }
 
 .expand {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--primary);
+    color: var(--background);
+    font-weight: 500;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    margin: auto;
+    margin-top: 0.5rem;
+    width: max-content;
+}
+
+.expand:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+    transition: 0.2s ease all;
 }
 
 #projects-chevron {
@@ -198,6 +207,4 @@ button div {
         padding: 0rem;
     }
 }
-
-/* Rest of your existing styles... */
 </style>

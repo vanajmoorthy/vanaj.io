@@ -65,7 +65,7 @@ export default {
 					github: "#3ed3a1",
 					envelope: "#e3655b",
 					square: "#228cdb",
-					hover: "#15334b",
+					hover: "#1c405e",
 					"scrollbar-bg": "#2c3649",
 					/* scrollbar background */
 					"scrollbar-thumb": "#20496b",
