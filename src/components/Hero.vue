@@ -1,7 +1,7 @@
 <template>
 	<div class="hero">
 		<div class="image-holder">
-			<img src="../assets/me-new.jpg" alt="Image of Vanaj Moorthy" />
+			<img src="../assets/me.jpg" alt="Image of Vanaj Moorthy" />
 		</div>
 		<div class="text">
 			<div class="top-text">
