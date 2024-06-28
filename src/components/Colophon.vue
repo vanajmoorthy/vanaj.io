@@ -13,10 +13,7 @@
 				<a href="https://www.behance.dev" target="_blank" rel="noopener noreferrer">Behance</a>
 				and
 				<a href="https://www.last.fm/api/" target="_blank" rel="noopener noreferrer">Last.fm</a>
-				APIs. It's inspirations/plagiarism sources are
-				<a href="https://kabirgoel.com" target="_blank" rel="noopener noreferrer">kabirgoel.com</a>
-				and
-				<a href="https://aesign.me" target="_blank" rel="noopener noreferrer">aesign.me</a>. You can visit the
+				APIs. You can visit the
 				source
 				<a href="https://github.com/vanajmoorthy/vanaj.io" target="_blank" rel="noopener noreferrer">here</a>
 				if you see something you like!

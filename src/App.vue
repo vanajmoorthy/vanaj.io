@@ -140,7 +140,7 @@ export default {
 					title: "Aelo",
 					image: aeloImage,
 					tag: "UI/UX",
-					description: ["Winning second place at AngelHack Delhi 2019, Aelo is a travel assistant app for which I designed the user interface.", "Designed in Sketch and written for iOS using UIKit, Aelo included many features to make planning travel easier, such as a flight-delay prediction machine learning model."],
+					description: ["Developed for AngelHack Delhi 2019, Aelo is a travel assistant app for which I designed the user interface.", "Designed in Sketch and written for iOS using UIKit, Aelo included many features to make planning travel easier, such as a flight-delay prediction machine learning model."],
 					demoLink: "https://www.behance.net/gallery/80367169/Aelo-UI-Demo-and-Pitch-Video",
 					sourceLink: "",
 				},
