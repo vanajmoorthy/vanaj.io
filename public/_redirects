@@ -1,89 +1,89 @@
 
 # all sub redirects
-https://vanajmoorthy.com/morph https://vanajmoorthy.com/morph/index.html 302
-https://vanajmoorthy.com/morph/* https://morph-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/morph https://vanaj.io/morph/index.html 302
+https://vanaj.io/morph/* https://morph-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/obstacles https://vanajmoorthy.com/obstacles/index.html 302
-https://vanajmoorthy.com/obstacles/* https://obstacles-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/obstacles https://vanaj.io/obstacles/index.html 302
+https://vanaj.io/obstacles/* https://obstacles-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/graph https://vanajmoorthy.com/graph/index.html 302
-https://vanajmoorthy.com/graph/* https://graph-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/graph https://vanaj.io/graph/index.html 302
+https://vanaj.io/graph/* https://graph-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/tictactoe https://vanajmoorthy.com/tictactoe/index.html 302
-https://vanajmoorthy.com/tictactoe/* https://tictactoe-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/tictactoe https://vanaj.io/tictactoe/index.html 302
+https://vanaj.io/tictactoe/* https://tictactoe-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/pi2 https://vanajmoorthy.com/pi2/index.html 302
-https://vanajmoorthy.com/pi2/* https://pi2-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/pi2 https://vanaj.io/pi2/index.html 302
+https://vanaj.io/pi2/* https://pi2-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/pi https://vanajmoorthy.com/pi/index.html 302
-https://vanajmoorthy.com/pi/* https://pi-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/pi https://vanaj.io/pi/index.html 302
+https://vanaj.io/pi/* https://pi-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/yoda https://vanajmoorthy.com/yoda/index.html 302
-https://vanajmoorthy.com/yoda/* https://yoda-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/yoda https://vanaj.io/yoda/index.html 302
+https://vanaj.io/yoda/* https://yoda-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/enigma https://vanajmoorthy.com/enigma/index.html 302
-https://vanajmoorthy.com/enigma/* https://enigma-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/enigma https://vanaj.io/enigma/index.html 302
+https://vanaj.io/enigma/* https://enigma-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/visualise https://vanajmoorthy.com/visualise/index.html 302
-https://vanajmoorthy.com/visualise/* https://visualise-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/visualise https://vanaj.io/visualise/index.html 302
+https://vanaj.io/visualise/* https://visualise-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/maze https://vanajmoorthy.com/maze/index.html 302
-https://vanajmoorthy.com/maze/* https://maze-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/maze https://vanaj.io/maze/index.html 302
+https://vanaj.io/maze/* https://maze-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/snake https://vanajmoorthy.com/snake/index.html 302
-https://vanajmoorthy.com/snake/* https://snake-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/snake https://vanaj.io/snake/index.html 302
+https://vanaj.io/snake/* https://snake-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/clock https://vanajmoorthy.com/clock/index.html 302
-https://vanajmoorthy.com/clock/* https://clock-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/clock https://vanaj.io/clock/index.html 302
+https://vanaj.io/clock/* https://clock-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/paint https://vanajmoorthy.com/paint/index.html 302
-https://vanajmoorthy.com/paint/* https://paint-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/paint https://vanaj.io/paint/index.html 302
+https://vanaj.io/paint/* https://paint-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/jockycipher https://vanajmoorthy.com/jockycipher/index.html 302
-https://vanajmoorthy.com/jockycipher/* https://jockycipher-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/jockycipher https://vanaj.io/jockycipher/index.html 302
+https://vanaj.io/jockycipher/* https://jockycipher-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/v1 https://vanajmoorthy.com/v1/index.html 302
-https://vanajmoorthy.com/v1/* https://v1-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/v1 https://vanaj.io/v1/index.html 302
+https://vanaj.io/v1/* https://v1-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/v2 https://vanajmoorthy.com/v2/index.html 302
-https://vanajmoorthy.com/v2/* https://v2-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/v2 https://vanaj.io/v2/index.html 302
+https://vanaj.io/v2/* https://v2-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/autocats https://vanajmoorthy.com/autocats/index.html 302
-https://vanajmoorthy.com/autocats/* https://autocats-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/autocats https://vanaj.io/autocats/index.html 302
+https://vanaj.io/autocats/* https://autocats-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/dogs https://vanajmoorthy.com/dogs/index.html 302
-https://vanajmoorthy.com/dogs/* https://dogs-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/dogs https://vanaj.io/dogs/index.html 302
+https://vanaj.io/dogs/* https://dogs-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/blog https://vanajmoorthy.com/blog/index.html 302
-https://vanajmoorthy.com/blog/* https://blog-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/blog https://vanaj.io/blog/index.html 302
+https://vanaj.io/blog/* https://blog-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/gravity https://vanajmoorthy.com/gravity/index.html 302
-https://vanajmoorthy.com/gravity/* https://gravity-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/gravity https://vanaj.io/gravity/index.html 302
+https://vanaj.io/gravity/* https://gravity-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/agastya https://vanajmoorthy.com/agastya/index.html 302
-https://vanajmoorthy.com/agastya/* https://agastya-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/agastya https://vanaj.io/agastya/index.html 302
+https://vanaj.io/agastya/* https://agastya-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/lottietest https://vanajmoorthy.com/lottietest/index.html 302
-https://vanajmoorthy.com/lottietest/* https://lottietest-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/lottietest https://vanaj.io/lottietest/index.html 302
+https://vanaj.io/lottietest/* https://lottietest-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/fourier-series https://vanajmoorthy.com/fourier-series/index.html 302
-https://vanajmoorthy.com/fourier-series/* https://fourier-series-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/fourier-series https://vanaj.io/fourier-series/index.html 302
+https://vanaj.io/fourier-series/* https://fourier-series-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/fourier https://vanajmoorthy.com/fourier/index.html 302
-https://vanajmoorthy.com/fourier/* https://fourier-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/fourier https://vanaj.io/fourier/index.html 302
+https://vanaj.io/fourier/* https://fourier-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/tree https://vanajmoorthy.com/tree/index.html 302
-https://vanajmoorthy.com/tree/* https://tree-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/tree https://vanaj.io/tree/index.html 302
+https://vanaj.io/tree/* https://tree-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/decision https://vanajmoorthy.com/decision/index.html 302
-https://vanajmoorthy.com/decision/* https://decision-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/decision https://vanaj.io/decision/index.html 302
+https://vanaj.io/decision/* https://decision-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/simar https://vanajmoorthy.com/simar/index.html 302
-https://vanajmoorthy.com/simar/* https://simar-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/globe https://vanaj.io/globe/index.html 302
+https://vanaj.io/globe/* https://globe-vanajmoorthy.netlify.app/:splat 200!
 
-https://vanajmoorthy.com/contract https://vanajmoorthy.com/contract/index.html 302
-https://vanajmoorthy.com/contract/* https://contract-vanajmoorthy.netlify.app/:splat 200!
+https://vanaj.io/gen https://vanaj.io/gen/index.html 302
+https://vanaj.io/gen/* https://gen-vanajmoorthy.netlify.app/:splat 200!
 
 
 # all github redirects
-https://vanajmoorthy.com/gh/* https://github.com/vanajmoorthy/:splat 302
+https://vanaj.io/gh/* https://github.com/vanajmoorthy/:splat 302
