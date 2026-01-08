@@ -14,6 +14,7 @@ module.exports = {
 	plugins: ["vue"],
 	rules: {
 		"vue/valid-v-for": 0,
+		"vue/multi-word-component-names": 0,
 		"no-undef": 0,
 	},
 };
